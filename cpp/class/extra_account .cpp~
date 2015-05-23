@@ -1,0 +1,46 @@
+#include "account.h"
+
+namespace Program
+{
+    Account::Account()
+    {
+        ID = "No001";
+        Name = "Pasha";
+        Balance = 1000000000;
+    }
+
+    Account::~Account()
+    {
+
+    }
+
+    void Account::setID(char* id)
+    {
+        ID = id;
+    }
+
+    char* Account::getID()
+    {
+        return ID;
+    }
+
+    void Account::setName(char* name)
+    {
+        Name = name;
+    }
+
+    char* Account::getName()
+    {
+        return Name;
+    }
+
+    void Account::setBalance(ui balance)
+    {
+        Balance = balance;
+    }
+
+    ui Account::getBalance()
+    {
+        return Balance;
+    }
+}

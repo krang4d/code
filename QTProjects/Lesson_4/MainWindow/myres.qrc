@@ -1,0 +1,10 @@
+<RCC>
+    <qresource prefix="/Images">
+        <file>girls.png</file>
+        <file>close.png</file>
+        <file>open.png</file>
+        <file>save.png</file>
+        <file>New_File.png</file>
+        <file>Save-as.png</file>
+    </qresource>
+</RCC>
