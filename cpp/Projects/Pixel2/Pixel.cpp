@@ -28,8 +28,8 @@ void Pixel::SetColor(const Color & clr)
     c = clr;
 }
 
-void Pixel::Print() const
+void Pixel::Print(std::ostream &os) const
 {
-    Point::Print();
-    cout << c << endl;
+    Point::Print(os);
+    os << c;
 }

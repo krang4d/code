@@ -16,9 +16,9 @@ void Point::SetY(int _y)
         y = _y >= 0 ? _y : 0;
 }
 
-void Point::Print() const
+void Point::Print(std::ostream &os) const
 {
-        cout<<"("<<GetX()<<", "<<GetY()<<")";
+        os <<"("<<GetX()<<", "<<GetY()<<")";
 }
 
 void Point::Move(int dx, int dy)

@@ -3,14 +3,17 @@
 #include "Pixel.h"
 using namespace std;
 
+//Liskov
+// 7 урок 1:32
+
 void test(Point *p)
 {
+    cout << "test(Point *p): ";
     p->Print();
     p->Move(1,1);
     p->Print();
     cout << endl;
 }
-
 
 int main()
 {
@@ -43,9 +46,28 @@ int main()
     p = &c;             // **восходящее** приведение
 
     q = static_cast<Pixel *>(p);
-    q->Print();
+    //q->Print(); cout << endl;
 
-    test(c);
+    Point pt(11,12);
+    test(&pt);
+    test(&a);
+
+    cout << "-------------------------" << endl;
+    cout << "Полиморфизм" << endl;
+    cout << "-------------------------" << endl;
+
+    Point *arr[] = {&pt, &a, &b, &c};
+    const int n = sizeof arr / sizeof *arr;
+
+    for (int i=0 ; i<n; ++i)
+    {   arr[i]->Print(); cout <<endl; }
+    for (int i=0 ; i<n; ++i)
+    {   arr[i]->Move(10,20); cout <<endl; }
+    for (int i=0 ; i<n; ++i)
+    {   arr[i]->Print(); cout <<endl; }
+
+    cout << "Pixel a: " << a << endl;
+
 
     return 0;
 }

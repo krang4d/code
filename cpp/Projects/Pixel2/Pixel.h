@@ -14,7 +14,7 @@ public:
     const Color & GetColor()const;
     void SetColor(const Color &);
 
-    void Print() const;
+    void Print(std::ostream & = std::cout) const;
 
 private:
     Color c;
