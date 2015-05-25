@@ -3,7 +3,7 @@ CONFIG += console
 CONFIG -= app_bundle
 CONFIG -= qt
 
-SOURCES += main.c
+SOURCES += usehl.c
 
 include(deployment.pri)
 qtcAddDeployment()
