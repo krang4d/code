@@ -1,0 +1,508 @@
+<HTML
+><HEAD
+>
+<META HTTP-EQUIV="content-type" CONTENT="text/html; charset=windows-1251">
+<TITLE
+>
+Сжатие и архивация файлов с помощью Gzip, Zip и Tar</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.64
+"><LINK
+REL="HOME"
+TITLE="Red Hat Linux 7.2"
+HREF="index.html"><LINK
+REL="UP"
+TITLE="Управление файлами и каталогами"
+HREF="ch-managers.html"><LINK
+REL="PREVIOUS"
+TITLE="Определение и работа с разными типами файлов"
+HREF="s1-managing-file-types.html"><LINK
+REL="NEXT"
+TITLE="Просмотр PDF-файлов"
+HREF="s1-pdf-viewing.html"></HEAD
+><BODY
+CLASS="SECT1"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="3"
+ALIGN="center"
+>Red Hat Linux 7.2: Официальное руководство по основам работы с Red Hat Linux</TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="bottom"
+><A
+HREF="s1-managing-file-types.html"
+>Назад</A
+></TD
+><TD
+WIDTH="80%"
+ALIGN="center"
+VALIGN="bottom"
+>Глава 11. Управление файлами и каталогами</TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="bottom"
+><A
+HREF="s1-pdf-viewing.html"
+>Вперед</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="SECT1"
+><H1
+CLASS="SECT1"
+><A
+NAME="S1-ZIP-TAR"
+>Сжатие и архивация файлов с помощью Gzip, Zip и Tar</A
+></H1
+><DIV
+CLASS="SECT2"
+><H2
+CLASS="SECT2"
+><A
+NAME="S1-GZIP-ZIP"
+>Сжатие с помощью Gzip и Zip</A
+></H2
+><P
+>	  Сжатые файлы занимают меньше места на диске и загружаются из сети быстрее, чем большие, несжатые файлы. Вы можете сжать файлы Linux свободно распространяемыми утилитами сжатия <B
+CLASS="APPLICATION"
+>Gzip</B
+> или <B
+CLASS="APPLICATION"
+>	  Zip</B
+>, такой формат распознаётся большинством операционных систем.	</P
+><P
+>	  По умолчанию, сжатые файлы получают расширение<TT
+CLASS="FILENAME"
+>	  .gz</TT
+>.  Команда <TT
+CLASS="USERINPUT"
+><B
+>Gzip</B
+></TT
+> создаёт сжатый файл с расширением <TT
+CLASS="FILENAME"
+>.gz</TT
+>; <TT
+CLASS="USERINPUT"
+><B
+>Gunzip</B
+></TT
+> извлекает сжатые файлы и удаляет файл <TT
+CLASS="FILENAME"
+>.gz</TT
+>.
+	</P
+><P
+>	  Чтобы сжать файл, в приглашении оболочки введите следующая команду:
+	</P
+><TABLE
+BORDER="0"
+BGCOLOR="#E0E0E0"
+WIDTH="100%"
+><TR
+><TD
+><PRE
+CLASS="SCREEN"
+><TT
+CLASS="COMMAND"
+>gzip filename.ext</TT
+></PRE
+></TD
+></TR
+></TABLE
+><P
+>	  Файл будет сжат и сохранён под именем <TT
+CLASS="FILENAME"
+>filename.ext.gz</TT
+>.
+	</P
+><P
+>	  Чтобы развернуть сжатый файл введите:
+	</P
+><TABLE
+BORDER="0"
+BGCOLOR="#E0E0E0"
+WIDTH="100%"
+><TR
+><TD
+><PRE
+CLASS="SCREEN"
+><TT
+CLASS="COMMAND"
+>gunzip filename.ext.gz</TT
+></PRE
+></TD
+></TR
+></TABLE
+><P
+>	  Файл <TT
+CLASS="FILENAME"
+>filename.ext.gz</TT
+> при этом удаляется и заменяется файлом <TT
+CLASS="FILENAME"
+>filename.ext</TT
+>.
+	</P
+><P
+>	  Если вы обмениваетесь файлам с пользователям не Linux, вероятно лучше использовать <TT
+CLASS="USERINPUT"
+><B
+>zip</B
+></TT
+>, чтобы избежать проблем совместимости. Red Hat Linux может легко открыть zip или gzip файлы, но не Linux операционные системы могут не справиться с файлами gzip.
+	</P
+><P
+>	  Чтобы сжать файл с помощью <TT
+CLASS="USERINPUT"
+><B
+>zip</B
+></TT
+>, введите:
+	</P
+><TABLE
+BORDER="0"
+BGCOLOR="#E0E0E0"
+WIDTH="100%"
+><TR
+><TD
+><PRE
+CLASS="SCREEN"
+><TT
+CLASS="COMMAND"
+>zip -r filename.zip files</TT
+></PRE
+></TD
+></TR
+></TABLE
+><P
+>	  В этом примере <I
+CLASS="EMPHASIS"
+>filename</I
+> определяет имя создаваемого файла, а <I
+CLASS="EMPHASIS"
+>files</I
+> определяет какие файлы вы хотите включить в архив:
+	</P
+><P
+>	  Чтобы извлечь содержимое файла zip, введите:
+	</P
+><TABLE
+BORDER="0"
+BGCOLOR="#E0E0E0"
+WIDTH="100%"
+><TR
+><TD
+><PRE
+CLASS="SCREEN"
+><TT
+CLASS="COMMAND"
+>unzip filename.zip</TT
+></PRE
+></TD
+></TR
+></TABLE
+><P
+>	  Вы можете сжать с помощью zip или gzip сразу несколько файлов. Перечислите имена файлов, разделив их пробелами.
+	</P
+><TABLE
+BORDER="0"
+BGCOLOR="#E0E0E0"
+WIDTH="100%"
+><TR
+><TD
+><PRE
+CLASS="SCREEN"
+><TT
+CLASS="COMMAND"
+>gzip filename.gz file1 file2 file3 /user/work/school </TT
+></PRE
+></TD
+></TR
+></TABLE
+><P
+>	  Приведённая выше команда сожмёт <TT
+CLASS="FILENAME"
+>file1</TT
+>, <TT
+CLASS="FILENAME"
+>file2</TT
+>, <TT
+CLASS="FILENAME"
+> file3</TT
+> и содержимое каталога <TT
+CLASS="FILENAME"
+>/user/work/school</TT
+> и поместит их в файл <TT
+CLASS="FILENAME"
+>filename.gz</TT
+>.
+	</P
+></DIV
+><DIV
+CLASS="SECT2"
+><H2
+CLASS="SECT2"
+><A
+NAME="S2-TAR"
+>Архивация с помощью Tar</A
+></H2
+><P
+>	  Tar сохраняет несколько файлов или содержимое каталога или каталогов в одном файле. Это хороший способ создавать резервные копии и архивы. Обычно файлы, сделанные tar, имеют расширение <TT
+CLASS="FILENAME"
+>.tar</TT
+>.
+	</P
+><P
+>	  Чтобы создать файл tar, введите:
+	</P
+><TABLE
+BORDER="0"
+BGCOLOR="#E0E0E0"
+WIDTH="100%"
+><TR
+><TD
+><PRE
+CLASS="SCREEN"
+><TT
+CLASS="COMMAND"
+>tar -cvf filename.tar files/directories</TT
+></PRE
+></TD
+></TR
+></TABLE
+><P
+>	  В этом примере <TT CLASS="FILENAME" >filename.tar</TT > определяет имя создаваемого файла, а <TT CLASS="FILENAME" >files/directories</TT > определяет какие файлы или каталоги вы хотите включить в новый архив.
+	</P
+><P
+> 
+	Вы можете использовать абсолютные или относительные пути для этих файлов или каталогов (чтобы узнать больше о путях, обратитесь к <A
+HREF="s1-navigating-cd.html"
+>разделу <I
+>Смена каталогов с помощью cd</I
+> в Главе 10</A
+>).  Разделите имена файлов и каталогов пробелами.
+      </P
+><P
+>	В показанном ниже примере показано создание файла с абсолютными путями:
+      </P
+><TABLE
+BORDER="0"
+BGCOLOR="#E0E0E0"
+WIDTH="100%"
+><TR
+><TD
+><PRE
+CLASS="SCREEN"
+>	<TT
+CLASS="COMMAND"
+> tar -cvf foo.tar /home/mine/work /home/mine/school</TT
+>
+      </PRE
+></TD
+></TR
+></TABLE
+><P
+>	Указанная выше команда поместит все файлы каталога <TT
+CLASS="FILENAME"
+>/work</TT
+> и подкаталога /school в новый файл <TT
+CLASS="FILENAME"
+>foo.tar</TT
+>  в текущем рабочем каталоге.
+      </P
+><P
+>	Команда <TT
+CLASS="USERINPUT"
+><B
+>tar -cvf foo.tar file1.txt file2.txt file3.txt</B
+></TT
+> поместит файлы: <TT
+CLASS="FILENAME"
+>file1.txt</TT
+>, <TT
+CLASS="FILENAME"
+>file2.txt</TT
+> и <TT
+CLASS="FILENAME"
+>file3.txt</TT
+> в новый файл <TT
+CLASS="FILENAME"
+>foo.tar</TT
+>.
+      </P
+><P
+>	Чтобы просмотреть содержимое файла tar, введите:
+      </P
+><TABLE
+BORDER="0"
+BGCOLOR="#E0E0E0"
+WIDTH="100%"
+><TR
+><TD
+><PRE
+CLASS="SCREEN"
+>	<TT
+CLASS="COMMAND"
+>tar -tvf foo.tar</TT
+></PRE
+></TD
+></TR
+></TABLE
+><P
+>	  Чтобы извлечь содержимое файла tar, введите:
+	</P
+><TABLE
+BORDER="0"
+BGCOLOR="#E0E0E0"
+WIDTH="100%"
+><TR
+><TD
+><PRE
+CLASS="SCREEN"
+><TT
+CLASS="COMMAND"
+>tar -xvf foo.tar</TT
+></PRE
+></TD
+></TR
+></TABLE
+><P
+>	  Эта команда не удаляет файл <TT
+CLASS="FILENAME"
+>.tar</TT
+>, а извлекает содержимое <TT
+CLASS="FILENAME"
+>.tar</TT
+> в текущий рабочий каталог.
+	</P
+><P
+>	  Команда <TT
+CLASS="USERINPUT"
+><B
+>tar</B
+></TT
+> не автоматического выполняет сжатия файлов. Вы можете сжать файлы tar выполнив:
+	</P
+><TABLE
+BORDER="0"
+BGCOLOR="#E0E0E0"
+WIDTH="100%"
+><TR
+><TD
+><PRE
+CLASS="SCREEN"
+><TT
+CLASS="COMMAND"
+>tar -czvf foo.tar</TT
+></PRE
+></TD
+></TR
+></TABLE
+><P
+>	  Сжатые файлы обычно имеют расширение <TT
+CLASS="FILENAME"
+>.tgz</TT
+> и сжимаются при помощи gzip.
+	</P
+><P
+>	  Чтобы развернуть сжатый файл tar введите:
+	</P
+><TABLE
+BORDER="0"
+BGCOLOR="#E0E0E0"
+WIDTH="100%"
+><TR
+><TD
+><PRE
+CLASS="SCREEN"
+><TT
+CLASS="COMMAND"
+>tar -xzvf foo.tgz</TT
+></PRE
+></TD
+></TR
+></TABLE
+></DIV
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="s1-managing-file-types.html"
+>Назад</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="index.html"
+>Начало</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="s1-pdf-viewing.html"
+>Вперед</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>Определение и работа с разными типами файлов</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="ch-managers.html"
+>Вверх</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>Просмотр PDF-файлов</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>
