@@ -6,6 +6,25 @@ using namespace std;
 //Liskov
 // 7 урок 1:32
 
+
+void bad_test(Point r)      //срезка объекта
+{
+    cout << "test(Point r): ";
+    r.Print();
+    r.Move(1,1);
+    r.Print();
+    cout << endl;
+}
+
+void test(Point &r)
+{
+    cout << "test(Point &r): ";
+    r.Print();
+    r.Move(1,1);
+    r.Print();
+    cout << endl;
+}
+
 void test(Point *p)
 {
     cout << "test(Point *p): ";
@@ -51,6 +70,14 @@ int main()
     Point pt(11,12);
     test(&pt);
     test(&a);
+    test(pt);
+    test(a);
+    bad_test(pt);
+    bad_test(a);
+
+    Point *pp = new Pixel(111,222,Pixel::green);
+    test(pp);
+    delete pp;
 
     cout << "-------------------------" << endl;
     cout << "Полиморфизм" << endl;

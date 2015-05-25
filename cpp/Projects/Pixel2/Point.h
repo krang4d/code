@@ -13,8 +13,9 @@ public:
     virtual void Print(std::ostream & = std::cout) const;
     void Move(int delta_x, int delta_y);
     double qDist(const Point &) const;
+
     Point(int x=0, int y=0);
-    ~Point();
+    virtual ~Point(){}
 
     friend double fDist(const Point &, const Point &);
 };

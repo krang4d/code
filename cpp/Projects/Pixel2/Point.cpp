@@ -39,11 +39,6 @@ Point::Point(int x, int y)
     SetY(y);
 }
 
-Point::~Point()
-{
-
-}
-
 double fDist(const Point &a, const Point &b)
 {
     return sqrt(pow(static_cast<double>(a.x-b.x),2)
