@@ -2,6 +2,7 @@
 #.gitignore
 #
 *.o
+*~
 *.autosave
 *Debug/
 #
