@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr" class="client-nojs">
+<head>
+<meta charset="UTF-8" />
+<title>find — Википедия</title>
+<meta name="generator" content="MediaWiki 1.26wmf6" />
+<link rel="alternate" href="android-app://org.wikipedia/http/ru.m.wikipedia.org/wiki/Find" />
+<link rel="alternate" type="application/x-wiki" title="Править" href="/w/index.php?title=Find&amp;action=edit" />
+<link rel="edit" title="Править" href="/w/index.php?title=Find&amp;action=edit" />
+<link rel="apple-touch-icon" href="/static/apple-touch/wikipedia.png" />
+<link rel="shortcut icon" href="/static/favicon/wikipedia.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Википедия (ru)" />
+<link rel="EditURI" type="application/rsd+xml" href="//ru.wikipedia.org/w/api.php?action=rsd" />
+<link rel="alternate" hreflang="x-default" href="/wiki/Find" />
+<link rel="copyright" href="//creativecommons.org/licenses/by-sa/3.0/" />
+<link rel="alternate" type="application/atom+xml" title="Википедия — Atom-лента" href="/w/index.php?title=%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:%D0%A1%D0%B2%D0%B5%D0%B6%D0%B8%D0%B5_%D0%BF%D1%80%D0%B0%D0%B2%D0%BA%D0%B8&amp;feed=atom" />
+<link rel="canonical" href="https://ru.wikipedia.org/wiki/Find" />
+<link rel="stylesheet" href="//ru.wikipedia.org/w/load.php?debug=false&amp;lang=ru&amp;modules=ext.flaggedRevs.basic%7Cext.gadget.collapserefs%2CdirectLinkToCommons%2Clogo%2CreferenceTooltips%7Cext.uls.nojs%7Cext.visualEditor.viewPageTarget.noscript%7Cext.wikihiero%2CwikimediaBadges%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.sectionAnchor%7Cmediawiki.skinning.interface%7Cmediawiki.ui.button%7Cskins.vector.styles%7Cwikibase.client.init&amp;only=styles&amp;skin=vector&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="//ru.wikipedia.org/w/load.php?debug=false&amp;lang=ru&amp;modules=site&amp;only=styles&amp;skin=vector&amp;*" />
+<noscript><link rel="stylesheet" href="//ru.wikipedia.org/w/load.php?debug=false&amp;lang=ru&amp;modules=noscript&amp;only=styles&amp;skin=vector&amp;*" /></noscript>
+<style>a:lang(ar),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}
+/* cache key: ruwiki:resourceloader:filter:minify-css:7:290c734e54aac81ff692398db34a7568 */</style>
+<script src="//ru.wikipedia.org/w/load.php?debug=false&amp;lang=ru&amp;modules=startup&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Find","wgTitle":"Find","wgCurRevisionId":69360765,"wgRevisionId":69360765,"wgArticleId":663118,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Командная строка MS-DOS/Windows","Утилиты UNIX"],"wgBreakFrames":false,"wgPageContentLanguage":"ru","wgPageContentModel":"wikitext","wgSeparatorTransformTable":[",\t."," \t,"],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","январь","февраль","март","апрель","май","июнь","июль","август","сентябрь","октябрь","ноябрь","декабрь"],"wgMonthNamesShort":["","янв","фев","мар","апр","май","июн","июл","авг","сен","окт","ноя","дек"],"wgRelevantPageName":"Find","wgRelevantArticleId":663118,"wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"hidesig":true,"preview":false,"publish":false},"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgVisualEditor":{"pageLanguageCode":"ru","pageLanguageDir":"ltr","usePageImages":true,"usePageDescriptions":true},"wgPoweredByHHVM":true,"wgULSAcceptLanguageList":["ru-ru","ru","en-us","en"],"wgULSCurrentAutonym":"русский","wgBetaFeaturesFeatures":[],"wgFlaggedRevsParams":{"tags":{"accuracy":{"levels":3,"quality":2,"pristine":4}}},"wgStableRevisionId":62472468,"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgNoticeProject":"wikipedia","wgWikibaseItemId":"Q114633","wgSiteNoticeId":"2.0"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function($,jQuery){mw.user.options.set({"variant":"ru"});});
+/* cache key: ruwiki:resourceloader:filter:minify-js:7:12c70f76b5c1cb7e09e9438ad2780fe1 */
+}</script>
+<script>if(window.mw){
+mw.loader.implement("user.tokens",function($,jQuery){mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\"});});
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax","ext.centralauth.centralautologin","mmv.head","ext.imageMetrics.head","ext.visualEditor.viewPageTarget.init","ext.uls.init","ext.uls.interface","ext.centralNotice.bannerController","skins.vector.js","ext.dismissableSiteNotice"]);
+}</script>
+<link rel="dns-prefetch" href="//meta.wikimedia.org" />
+<!--[if lt IE 7]><style type="text/css">body{behavior:url("/w/static/1.26wmf6/skins/Vector/csshover.min.htc")}</style><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-Find skin-vector action-view">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+
+							<div id="siteNotice"><!-- CentralNotice --><script>document.write("\u003Cdiv class=\"mw-dismissable-notice\"\u003E\u003Cdiv class=\"mw-dismissable-notice-close\"\u003E[\u003Ca href=\"#\"\u003Eскрыть\u003C/a\u003E]\u003C/div\u003E\u003Cdiv class=\"mw-dismissable-notice-body\"\u003E\u003Cdiv id=\"localNotice\" lang=\"ru\" dir=\"ltr\"\u003E\u003C/div\u003E\u003C/div\u003E\u003C/div\u003E");</script></div>
+						<div class="mw-indicators">
+</div>
+			<h1 id="firstHeading" class="firstHeading" lang="ru">find</h1>
+									<div id="bodyContent" class="mw-body-content">
+									<div id="siteSub">Материал из Википедии — свободной энциклопедии</div>
+								<div id="contentSub"><div id='mw-fr-reviewnotice' class='plainlinks flaggedrevs_preview'>Текущая версия страницы пока <a href="/wiki/%D0%92%D0%B8%D0%BA%D0%B8%D0%BF%D0%B5%D0%B4%D0%B8%D1%8F:%D0%9F%D1%80%D0%BE%D0%B2%D0%B5%D1%80%D0%BA%D0%B0_%D1%81%D1%82%D0%B0%D1%82%D0%B5%D0%B9/%D0%9F%D0%BE%D1%8F%D1%81%D0%BD%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B4%D0%BB%D1%8F_%D1%87%D0%B8%D1%82%D0%B0%D1%82%D0%B5%D0%BB%D0%B5%D0%B9" title="Википедия:Проверка статей/Пояснение для читателей">не проверялась</a> опытными участниками и может значительно отличаться от <a class="external text" href="//ru.wikipedia.org/w/index.php?title=Find&amp;stable=1">версии</a>, проверенной 11 апреля 2014; 
+проверки требуют <a class="external text" href="//ru.wikipedia.org/w/index.php?title=Find&amp;oldid=62472468&amp;diff=cur&amp;diffonly=0">11 правок</a>.</div><div id="mw-fr-revisiontag" class="flaggedrevs_short plainlinks noprint"><div class="flaggedrevs_short_basic"><img class="flaggedrevs-icon" src="//ru.wikipedia.org/static/1.26wmf6/extensions/FlaggedRevs/frontend/modules/img/1.png" alt="Текущая версия" title="Текущая версия" /><img id="mw-fr-revisiontoggle" class="fr-toggle-arrow" src="//ru.wikipedia.org/static/1.26wmf6/extensions/FlaggedRevs/frontend/modules/img/arrow-down.png" style="display:none;" alt="показать/скрыть подробности" /></div>
+<div id="mw-fr-revisiondetails-wrapper" style="position:relative;"><div id="mw-fr-revisiondetails" class="flaggedrevs_short_details" style="display:none">Текущая версия страницы пока <a href="/wiki/%D0%92%D0%B8%D0%BA%D0%B8%D0%BF%D0%B5%D0%B4%D0%B8%D1%8F:%D0%9F%D1%80%D0%BE%D0%B2%D0%B5%D1%80%D0%BA%D0%B0_%D1%81%D1%82%D0%B0%D1%82%D0%B5%D0%B9/%D0%9F%D0%BE%D1%8F%D1%81%D0%BD%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B4%D0%BB%D1%8F_%D1%87%D0%B8%D1%82%D0%B0%D1%82%D0%B5%D0%BB%D0%B5%D0%B9" title="Википедия:Проверка статей/Пояснение для читателей">не проверялась</a> опытными участниками и может значительно отличаться от <a class="external text" href="//ru.wikipedia.org/w/index.php?title=Find&amp;stable=1">версии</a>, проверенной 11 апреля 2014; 
+проверки требуют <a class="external text" href="//ru.wikipedia.org/w/index.php?title=Find&amp;oldid=62472468&amp;diff=cur&amp;diffonly=0">11 правок</a>.</div>
+</div>
+</div>
+</div>
+												<div id="jump-to-nav" class="mw-jump">
+					Перейти к:					<a href="#mw-head">навигация</a>, 					<a href="#p-search">поиск</a>
+				</div>
+				<div id="mw-content-text" lang="ru" dir="ltr" class="mw-content-ltr"><p><code><b>find</b></code>&#160;— утилита поиска файлов по имени и другим свойствам, используемая в <a href="/wiki/UNIX" title="UNIX">UNIX</a>‐подобных <a href="/wiki/%D0%9E%D0%BF%D0%B5%D1%80%D0%B0%D1%86%D0%B8%D0%BE%D0%BD%D0%BD%D0%B0%D1%8F_%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%B0" title="Операционная система">операционных системах</a>. Может производить поиск в одном или нескольких <a href="/wiki/%D0%9A%D0%B0%D1%82%D0%B0%D0%BB%D0%BE%D0%B3_(%D1%84%D0%B0%D0%B9%D0%BB%D0%BE%D0%B2%D0%B0%D1%8F_%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%B0)" title="Каталог (файловая система)">каталогах</a> с использованием критериев, заданных <a href="/wiki/%D0%9F%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D0%B5%D0%BB%D1%8C" title="Пользователь">пользователем</a>. По умолчанию, <code>find</code> возвращает все <a href="/wiki/%D0%A4%D0%B0%D0%B9%D0%BB" title="Файл">файлы</a> в рабочей директории. Более того, <code>find</code> позволяет применять пользователю определённые действия ко всем найденным файлам. Также поддерживаются <a href="/wiki/%D0%A0%D0%B5%D0%B3%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D1%8B%D0%B5_%D0%B2%D1%8B%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F" title="Регулярные выражения">регулярные выражения</a>. Для поиска файлов по содержимому следует пользоваться утилитой <a href="/wiki/Grep" title="Grep">grep</a>.</p>
+<p></p>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>Содержание</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#.D0.A1.D0.BF.D0.B8.D1.81.D0.BE.D0.BA_.D0.BA.D0.BB.D1.8E.D1.87.D0.B5.D0.B9"><span class="tocnumber">1</span> <span class="toctext">Список ключей</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#.D0.9F.D1.80.D0.B8.D0.BC.D0.B5.D1.80.D1.8B"><span class="tocnumber">2</span> <span class="toctext">Примеры</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#.D0.9F.D0.BE.D0.B8.D1.81.D0.BA_.D0.B2_.D1.82.D0.B5.D0.BA.D1.83.D1.89.D0.B5.D0.B9_.D0.B4.D0.B8.D1.80.D0.B5.D0.BA.D1.82.D0.BE.D1.80.D0.B8.D0.B8"><span class="tocnumber">2.1</span> <span class="toctext">Поиск в текущей директории</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#.D0.9F.D0.BE.D0.B8.D1.81.D0.BA_.D0.B2_.D0.BE.D0.BF.D1.80.D0.B5.D0.B4.D0.B5.D0.BB.D0.B5.D0.BD.D0.BD.D0.BE.D0.BC_.D0.BA.D0.B0.D1.82.D0.B0.D0.BB.D0.BE.D0.B3.D0.B5"><span class="tocnumber">2.2</span> <span class="toctext">Поиск в определенном каталоге</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#.D0.9F.D0.BE.D0.B8.D1.81.D0.BA_.D0.BF.D0.BE_.D0.BD.D0.B5.D1.81.D0.BA.D0.BE.D0.BB.D1.8C.D0.BA.D0.B8.D0.BC_.D0.B8.D0.BC.D0.B5.D0.BD.D0.B0.D0.BC_.D1.84.D0.B0.D0.B9.D0.BB.D0.BE.D0.B2"><span class="tocnumber">2.3</span> <span class="toctext">Поиск по нескольким именам файлов</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#.D0.9F.D0.BE.D0.B8.D1.81.D0.BA_.D0.BD.D0.B5.D1.81.D0.BA.D0.BE.D0.BB.D1.8C.D0.BA.D0.B8.D1.85_.D1.82.D0.B8.D0.BF.D0.BE.D0.B2_.D1.84.D0.B0.D0.B9.D0.BB.D0.BE.D0.B2.2C_.D0.B8.D1.81.D0.BF.D0.BE.D0.BB.D1.8C.D0.B7.D1.83.D1.8F_.D1.80.D0.B5.D0.B3.D1.83.D0.BB.D1.8F.D1.80.D0.BD.D1.8B.D0.B5_.D0.B2.D1.8B.D1.80.D0.B0.D0.B6.D0.B5.D0.BD.D0.B8.D1.8F"><span class="tocnumber">2.4</span> <span class="toctext">Поиск нескольких типов файлов, используя регулярные выражения</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#.D0.92.D1.8B.D0.BF.D0.BE.D0.BB.D0.BD.D0.B5.D0.BD.D0.B8.D0.B5_.D0.BA.D0.BE.D0.BC.D0.B0.D0.BD.D0.B4.D1.8B"><span class="tocnumber">2.5</span> <span class="toctext">Выполнение команды</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#.D0.9F.D0.BE.D0.B8.D1.81.D0.BA_.D0.B2_.D0.B7.D0.B0.D0.B2.D0.B8.D1.81.D0.B8.D0.BC.D0.BE.D1.81.D1.82.D0.B8_.D0.BE.D1.82_.D0.B2.D1.80.D0.B5.D0.BC.D0.B5.D0.BD.D0.B8_.D1.81.D0.BE.D0.B7.D0.B4.D0.B0.D0.BD.D0.B8.D1.8F"><span class="tocnumber">2.6</span> <span class="toctext">Поиск в зависимости от времени создания</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="#.D0.9F.D0.BE.D0.B8.D1.81.D0.BA_.D0.BF.D0.BE_.D1.80.D0.B0.D0.B7.D0.BC.D0.B5.D1.80.D1.83_.D1.84.D0.B0.D0.B9.D0.BB.D0.B0"><span class="tocnumber">2.7</span> <span class="toctext">Поиск по размеру файла</span></a></li>
+<li class="toclevel-2 tocsection-10"><a href="#.D0.9F.D0.BE.D0.B8.D1.81.D0.BA_.D1.84.D0.B0.D0.B9.D0.BB.D0.BE.D0.B2_.D0.BF.D1.80.D0.B8.D0.BD.D0.B0.D0.B4.D0.BB.D0.B5.D0.B6.D0.B0.D1.89.D0.B8.D1.85_.D0.BE.D0.BF.D1.80.D0.B5.D0.B4.D0.B5.D0.BB.D0.B5.D0.BD.D0.BD.D0.BE.D0.BC.D1.83_.D0.BF.D0.BE.D0.BB.D1.8C.D0.B7.D0.BE.D0.B2.D0.B0.D1.82.D0.B5.D0.BB.D1.8E"><span class="tocnumber">2.8</span> <span class="toctext">Поиск файлов принадлежащих определенному пользователю</span></a></li>
+<li class="toclevel-2 tocsection-11"><a href="#.D0.9F.D0.BE.D0.B8.D1.81.D0.BA_.D1.84.D0.B0.D0.B9.D0.BB.D0.BE.D0.B2_c_.D0.BE.D0.B3.D1.80.D0.B0.D0.BD.D0.B8.D1.87.D0.B5.D0.BD.D0.B8.D0.B5.D0.BC_.D0.B3.D0.BB.D1.83.D0.B1.D0.B8.D0.BD.D1.8B"><span class="tocnumber">2.9</span> <span class="toctext">Поиск файлов c ограничением глубины</span></a></li>
+<li class="toclevel-2 tocsection-12"><a href="#.D0.A0.D0.B5.D0.BA.D1.83.D1.80.D1.81.D0.B8.D0.B2.D0.BD.D0.BE.D0.B5_.D1.83.D0.B4.D0.B0.D0.BB.D0.B5.D0.BD.D0.B8.D0.B5_.D1.84.D0.B0.D0.B9.D0.BB.D0.B0_.D0.BE.D1.82_.D1.82.D0.B5.D0.BA.D1.83.D1.89.D0.B5.D0.B3.D0.BE_.D0.BA.D0.B0.D1.82.D0.B0.D0.BB.D0.BE.D0.B3.D0.B0.2C_.D0.BD.D0.B0_.D0.B7.D0.B0.D0.B4.D0.B0.D0.BD.D1.83.D1.8E_.D0.B3.D0.BB.D1.83.D0.B1.D0.B8.D0.BD.D1.83."><span class="tocnumber">2.10</span> <span class="toctext">Рекурсивное удаление файла от текущего каталога, на заданую глубину.</span></a></li>
+<li class="toclevel-2 tocsection-13"><a href="#.D0.98.D0.B3.D0.BD.D0.BE.D1.80.D0.B8.D1.80.D0.BE.D0.B2.D0.B0.D0.BD.D0.B8.D0.B5_.D0.BE.D1.88.D0.B8.D0.B1.D0.BE.D0.BA"><span class="tocnumber">2.11</span> <span class="toctext">Игнорирование ошибок</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-14"><a href="#.D0.A1.D1.81.D1.8B.D0.BB.D0.BA.D0.B8"><span class="tocnumber">3</span> <span class="toctext">Ссылки</span></a></li>
+</ul>
+</div>
+<p></p>
+<h2><span class="mw-headline" id=".D0.A1.D0.BF.D0.B8.D1.81.D0.BE.D0.BA_.D0.BA.D0.BB.D1.8E.D1.87.D0.B5.D0.B9">Список ключей</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Find&amp;veaction=edit&amp;vesection=1" title="Редактировать раздел «Список ключей»" class="mw-editsection-visualeditor">править</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Find&amp;action=edit&amp;section=1" title="Редактировать раздел «Список ключей»">править вики-текст</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><code>-name</code>&#160;— искать по имени файла, при использовании подстановочных образцов параметр заключается в кавычки.</li>
+<li><code>-type</code>&#160;— тип искомого: f=файл, d=каталог, l=ссылка (link), p=канал (pipe), s=сокет.</li>
+<li><code>-user</code>&#160;— владелец: имя пользователя или UID.</li>
+<li><code>-group</code>&#160;— владелец: группа пользователя или GID.</li>
+<li><code>-perm</code>&#160;— указываются права доступа.</li>
+<li><code>-size</code>&#160;— размер: указывается в 512-байтных блоках или байтах (признак байтов&#160;— символ «c» за числом).</li>
+<li><code>-atime</code>&#160;— время последнего обращения к файлу.</li>
+<li><code>-ctime</code>&#160;— время последнего изменения владельца или прав доступа к файлу.</li>
+<li><code>-mtime</code>&#160;— время последнего изменения файла.</li>
+<li><code>-newer другой_файл</code>&#160;— искать файлы созданные позже, чем другой_файл.</li>
+<li><code>-delete</code>&#160;— удалять найденные файлы.</li>
+<li><code>-ls</code>&#160;— генерирует вывод как команда <a href="/wiki/Ls" title="Ls">ls</a> -dgils.</li>
+<li><code>-print</code>&#160;— показывает на экране найденные файлы.</li>
+<li><code>-exec command {} \;</code>&#160;— выполняет над найденным файлом указанную команду; обратите внимание на синтаксис.</li>
+<li><code>-ok</code>&#160;— перед выполнением команды указанной в -exec, выдаёт запрос.</li>
+<li><code>-depth</code> или <code>-d</code>&#160;— начинать поиск с самых глубоких уровней вложенности, а не с корня каталога.</li>
+<li><code>-maxdepth</code>&#160;— максимальный уровень вложенности для поиска. «-maxdepth 0» ограничивает поиск текущим каталогом.</li>
+<li><code>-prune</code>&#160;— используется, когда вы хотите исключить из поиска определённые каталоги.</li>
+<li><code>-mount</code> или <code>-xdev</code>&#160;— не переходить на другие файловые системы.</li>
+<li><code>-regex</code>&#160;— искать по имени файла используя ргулярные выражения.</li>
+<li><code>-regextype тип</code>&#160;— указание типа используемых регулярных выражений.</li>
+<li><code>-P</code>&#160;— не разворачивать <a href="/wiki/%D0%A1%D0%B8%D0%BC%D0%B2%D0%BE%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F_%D1%81%D1%81%D1%8B%D0%BB%D0%BA%D0%B0" title="Символьная ссылка">символические ссылки</a>&#160;(поведение по умолчанию).</li>
+<li><code>-L</code>&#160;— разворачивать символические ссылки.</li>
+</ul>
+<h2><span class="mw-headline" id=".D0.9F.D1.80.D0.B8.D0.BC.D0.B5.D1.80.D1.8B">Примеры</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Find&amp;veaction=edit&amp;vesection=2" title="Редактировать раздел «Примеры»" class="mw-editsection-visualeditor">править</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Find&amp;action=edit&amp;section=2" title="Редактировать раздел «Примеры»">править вики-текст</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span class="mw-headline" id=".D0.9F.D0.BE.D0.B8.D1.81.D0.BA_.D0.B2_.D1.82.D0.B5.D0.BA.D1.83.D1.89.D0.B5.D0.B9_.D0.B4.D0.B8.D1.80.D0.B5.D0.BA.D1.82.D0.BE.D1.80.D0.B8.D0.B8">Поиск в текущей директории</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Find&amp;veaction=edit&amp;vesection=3" title="Редактировать раздел «Поиск в текущей директории»" class="mw-editsection-visualeditor">править</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Find&amp;action=edit&amp;section=3" title="Редактировать раздел «Поиск в текущей директории»">править вики-текст</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Найти все файлы, начиная с текущей директории, название которых начинается на <i>my</i>.</p>
+<pre>
+find . -name 'my*'
+</pre>
+<h3><span class="mw-headline" id=".D0.9F.D0.BE.D0.B8.D1.81.D0.BA_.D0.B2_.D0.BE.D0.BF.D1.80.D0.B5.D0.B4.D0.B5.D0.BB.D0.B5.D0.BD.D0.BD.D0.BE.D0.BC_.D0.BA.D0.B0.D1.82.D0.B0.D0.BB.D0.BE.D0.B3.D0.B5">Поиск в определенном каталоге</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Find&amp;veaction=edit&amp;vesection=4" title="Редактировать раздел «Поиск в определенном каталоге»" class="mw-editsection-visualeditor">править</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Find&amp;action=edit&amp;section=4" title="Редактировать раздел «Поиск в определенном каталоге»">править вики-текст</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Найти все файлы, начиная с корневой директории, название которых начинается на <i>my</i>.</p>
+<pre>
+find / -name 'my*'
+</pre>
+<p>Поиск в директориях /usr/local/man и /opt/local/man файлов, название которых начинается на <i>my</i>.</p>
+<pre>
+find /usr/local/man /opt/local/man -name 'my*'
+</pre>
+<h3><span class="mw-headline" id=".D0.9F.D0.BE.D0.B8.D1.81.D0.BA_.D0.BF.D0.BE_.D0.BD.D0.B5.D1.81.D0.BA.D0.BE.D0.BB.D1.8C.D0.BA.D0.B8.D0.BC_.D0.B8.D0.BC.D0.B5.D0.BD.D0.B0.D0.BC_.D1.84.D0.B0.D0.B9.D0.BB.D0.BE.D0.B2">Поиск по нескольким именам файлов</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Find&amp;veaction=edit&amp;vesection=5" title="Редактировать раздел «Поиск по нескольким именам файлов»" class="mw-editsection-visualeditor">править</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Find&amp;action=edit&amp;section=5" title="Редактировать раздел «Поиск по нескольким именам файлов»">править вики-текст</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Найти все файлы, начиная с текущей директории, название которых начинается на <i>my</i> или <i>qu</i>. Обратите внимание, что по умолчанию все аргументы соединены с помощью <i>логического и</i> (опция '-a'). Если необходимо объединить несколько аргументов <i>логическим или</i>&#160;— используйте опцию '-o'.</p>
+<pre>
+find . \( -name "my*" -o -name "qu*" \) -print
+</pre>
+<h3><span class="mw-headline" id=".D0.9F.D0.BE.D0.B8.D1.81.D0.BA_.D0.BD.D0.B5.D1.81.D0.BA.D0.BE.D0.BB.D1.8C.D0.BA.D0.B8.D1.85_.D1.82.D0.B8.D0.BF.D0.BE.D0.B2_.D1.84.D0.B0.D0.B9.D0.BB.D0.BE.D0.B2.2C_.D0.B8.D1.81.D0.BF.D0.BE.D0.BB.D1.8C.D0.B7.D1.83.D1.8F_.D1.80.D0.B5.D0.B3.D1.83.D0.BB.D1.8F.D1.80.D0.BD.D1.8B.D0.B5_.D0.B2.D1.8B.D1.80.D0.B0.D0.B6.D0.B5.D0.BD.D0.B8.D1.8F">Поиск нескольких типов файлов, используя регулярные выражения</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Find&amp;veaction=edit&amp;vesection=6" title="Редактировать раздел «Поиск нескольких типов файлов, используя регулярные выражения»" class="mw-editsection-visualeditor">править</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Find&amp;action=edit&amp;section=6" title="Редактировать раздел «Поиск нескольких типов файлов, используя регулярные выражения»">править вики-текст</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Найти все графические файлы, начиная с текущей директории, используя регулярные выражения.</p>
+<pre>
+find . -type f -regex ".*\.\(jpg\|jpeg\|gif\|png\|JPG\|JPEG\|GIF\|PNG\)"
+</pre>
+<h3><span class="mw-headline" id=".D0.92.D1.8B.D0.BF.D0.BE.D0.BB.D0.BD.D0.B5.D0.BD.D0.B8.D0.B5_.D0.BA.D0.BE.D0.BC.D0.B0.D0.BD.D0.B4.D1.8B">Выполнение команды</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Find&amp;veaction=edit&amp;vesection=7" title="Редактировать раздел «Выполнение команды»" class="mw-editsection-visualeditor">править</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Find&amp;action=edit&amp;section=7" title="Редактировать раздел «Выполнение команды»">править вики-текст</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Опция <i>-exec</i> выполняет следующую за ней команду и подставляет вместо <i>{}</i> текущий файл. Найти все каталоги ниже указанного каталога и изменить им права доступа:</p>
+<pre>
+find /path -type d -exec chmod 0755 {} \;
+</pre>
+<p>Опция -exec работает примерно в 10 раз медленнее, чем перенаправление вывода через xargs, поэтому данный код рекомендуется писать следующим образом:</p>
+<pre>
+find /path -type d | xargs chmod 0755
+</pre>
+<p>Однако, директории с именами, содержащими пробелы, методом перенаправления через xargs обработаны не будут, поэтому следует использовать первый вариант, дополненный:</p>
+<pre>
+find /path -type d -exec chmod 0755 "{}" \;
+</pre>
+<p>Поиск&#160; всех файлов php.ini от текущего каталога и&#160; замена текста в каждом&#160; найденном файле.</p>
+<pre>
+find . -name 'php.ini' -exec sed -i 's/log_errors = Off/log_errors = On/g' "{}" \;
+</pre>
+<h3><span class="mw-headline" id=".D0.9F.D0.BE.D0.B8.D1.81.D0.BA_.D0.B2_.D0.B7.D0.B0.D0.B2.D0.B8.D1.81.D0.B8.D0.BC.D0.BE.D1.81.D1.82.D0.B8_.D0.BE.D1.82_.D0.B2.D1.80.D0.B5.D0.BC.D0.B5.D0.BD.D0.B8_.D1.81.D0.BE.D0.B7.D0.B4.D0.B0.D0.BD.D0.B8.D1.8F">Поиск в зависимости от времени создания</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Find&amp;veaction=edit&amp;vesection=8" title="Редактировать раздел «Поиск в зависимости от времени создания»" class="mw-editsection-visualeditor">править</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Find&amp;action=edit&amp;section=8" title="Редактировать раздел «Поиск в зависимости от времени создания»">править вики-текст</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Вывести список файлов во всей файловой системе, изменённых в течение последней минуты:</p>
+<pre>
+find / -mmin -1 -print
+</pre>
+<p>Вывести список файлов во всей файловой системе, которые были изменены более 31 дня назад:</p>
+<pre>
+find / -mtime +31 -print
+</pre>
+<h3><span class="mw-headline" id=".D0.9F.D0.BE.D0.B8.D1.81.D0.BA_.D0.BF.D0.BE_.D1.80.D0.B0.D0.B7.D0.BC.D0.B5.D1.80.D1.83_.D1.84.D0.B0.D0.B9.D0.BB.D0.B0">Поиск по размеру файла</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Find&amp;veaction=edit&amp;vesection=9" title="Редактировать раздел «Поиск по размеру файла»" class="mw-editsection-visualeditor">править</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Find&amp;action=edit&amp;section=9" title="Редактировать раздел «Поиск по размеру файла»">править вики-текст</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Вывести список файлов во всей файловой системе, чей размер больше 100 Мб:</p>
+<pre>
+find / -size +100M -print
+</pre>
+<h3><span class="mw-headline" id=".D0.9F.D0.BE.D0.B8.D1.81.D0.BA_.D1.84.D0.B0.D0.B9.D0.BB.D0.BE.D0.B2_.D0.BF.D1.80.D0.B8.D0.BD.D0.B0.D0.B4.D0.BB.D0.B5.D0.B6.D0.B0.D1.89.D0.B8.D1.85_.D0.BE.D0.BF.D1.80.D0.B5.D0.B4.D0.B5.D0.BB.D0.B5.D0.BD.D0.BD.D0.BE.D0.BC.D1.83_.D0.BF.D0.BE.D0.BB.D1.8C.D0.B7.D0.BE.D0.B2.D0.B0.D1.82.D0.B5.D0.BB.D1.8E">Поиск файлов принадлежащих определенному пользователю</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Find&amp;veaction=edit&amp;vesection=10" title="Редактировать раздел «Поиск файлов принадлежащих определенному пользователю»" class="mw-editsection-visualeditor">править</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Find&amp;action=edit&amp;section=10" title="Редактировать раздел «Поиск файлов принадлежащих определенному пользователю»">править вики-текст</a><span class="mw-editsection-bracket">]</span></span></h3>
+<pre>
+find . -user &lt;userid&gt;
+</pre>
+<h3><span class="mw-headline" id=".D0.9F.D0.BE.D0.B8.D1.81.D0.BA_.D1.84.D0.B0.D0.B9.D0.BB.D0.BE.D0.B2_c_.D0.BE.D0.B3.D1.80.D0.B0.D0.BD.D0.B8.D1.87.D0.B5.D0.BD.D0.B8.D0.B5.D0.BC_.D0.B3.D0.BB.D1.83.D0.B1.D0.B8.D0.BD.D1.8B">Поиск файлов c ограничением глубины</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Find&amp;veaction=edit&amp;vesection=11" title="Редактировать раздел «Поиск файлов c ограничением глубины»" class="mw-editsection-visualeditor">править</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Find&amp;action=edit&amp;section=11" title="Редактировать раздел «Поиск файлов c ограничением глубины»">править вики-текст</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>При поиске в текущем каталоге, глубина поиска указывается от корневого каталога, а не от текущего.</p>
+<pre>
+find . -maxdepth 4 -name 'restore.php'
+</pre>
+<h3><span class="mw-headline" id=".D0.A0.D0.B5.D0.BA.D1.83.D1.80.D1.81.D0.B8.D0.B2.D0.BD.D0.BE.D0.B5_.D1.83.D0.B4.D0.B0.D0.BB.D0.B5.D0.BD.D0.B8.D0.B5_.D1.84.D0.B0.D0.B9.D0.BB.D0.B0_.D0.BE.D1.82_.D1.82.D0.B5.D0.BA.D1.83.D1.89.D0.B5.D0.B3.D0.BE_.D0.BA.D0.B0.D1.82.D0.B0.D0.BB.D0.BE.D0.B3.D0.B0.2C_.D0.BD.D0.B0_.D0.B7.D0.B0.D0.B4.D0.B0.D0.BD.D1.83.D1.8E_.D0.B3.D0.BB.D1.83.D0.B1.D0.B8.D0.BD.D1.83.">Рекурсивное удаление файла от текущего каталога, на заданую глубину.</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Find&amp;veaction=edit&amp;vesection=12" title="Редактировать раздел «Рекурсивное удаление файла от текущего каталога, на заданую глубину.»" class="mw-editsection-visualeditor">править</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Find&amp;action=edit&amp;section=12" title="Редактировать раздел «Рекурсивное удаление файла от текущего каталога, на заданую глубину.»">править вики-текст</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Удаляет все файлы restore.php от текущего каталога, но не глубже 4 уровня вложенности относительно корневого каталога /</p>
+<p>Начинает поиск в папке /var/www, но не глубже /var/www/*/*/ и удаляет все файлы restore.php в найденном.</p>
+<pre>
+find /var/www -maxdepth 4 -name 'restore.php' -exec rm -r {} \;
+</pre>
+<h3><span class="mw-headline" id=".D0.98.D0.B3.D0.BD.D0.BE.D1.80.D0.B8.D1.80.D0.BE.D0.B2.D0.B0.D0.BD.D0.B8.D0.B5_.D0.BE.D1.88.D0.B8.D0.B1.D0.BE.D0.BA">Игнорирование ошибок</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Find&amp;veaction=edit&amp;vesection=13" title="Редактировать раздел «Игнорирование ошибок»" class="mw-editsection-visualeditor">править</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Find&amp;action=edit&amp;section=13" title="Редактировать раздел «Игнорирование ошибок»">править вики-текст</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Если при поиске возникает ошибка (например&#160;— нет доступа чтения из каталога) то вывод команды становится менее информативным. <a href="/wiki/%D0%9F%D0%B5%D1%80%D0%B5%D0%BD%D0%B0%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5_(UNIX)" title="Перенаправление (UNIX)" class="mw-redirect">Перенаправьте вывод STDERR</a> в <a href="/wiki//dev/null" title="/dev/null">/dev/null</a>.</p>
+<pre>
+find / -name 'secret.keys' -print 2&gt;/dev/null
+</pre>
+<h2><span class="mw-headline" id=".D0.A1.D1.81.D1.8B.D0.BB.D0.BA.D0.B8">Ссылки</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Find&amp;veaction=edit&amp;vesection=14" title="Редактировать раздел «Ссылки»" class="mw-editsection-visualeditor">править</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Find&amp;action=edit&amp;section=14" title="Редактировать раздел «Ссылки»">править вики-текст</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><code><a rel="nofollow" class="external text" href="http://linux.die.net/man/1/find">find(1)</a></code>&#160;—&#160;страница справки <a href="/wiki/Man" title="Man">man</a> по пользовательским командам <a href="/wiki/GNU/Linux" title="GNU/Linux" class="mw-redirect">GNU/Linux</a> &#160;<span class="ref-info" title="на английском языке" style="font-size:85%; cursor:help; color:#888;">(англ.)</span> &#160;<span class="ref-info" title="на английском языке" style="font-size:85%; cursor:help; color:#888;">(англ.)</span></li>
+<li><a rel="nofollow" class="external text" href="http://www.freebsd.org.ua/man/find.1.html">«Страница Справочника find.1»</a> &#160;— перевод man find из FreeBSD 7.1.&#160;<span class="ref-info" title="на русском языке" style="font-size:85%; cursor:help; color:#888;">(рус.)</span></li>
+</ul>
+<ul>
+<li><a rel="nofollow" class="external text" href="http://ant0.ru/broken_links.html">«Как выловить битые ссылки»</a> &#160;— с помощью find’а найти все битые ссылки. &#160;<span class="ref-info" title="на русском языке" style="font-size:85%; cursor:help; color:#888;">(рус.)</span></li>
+</ul>
+<p><br /></p>
+<table class="navbox collapsible nowraplinks" style="margin:auto;;">
+<tr>
+<th colspan="2" style="text-align:center;width:100%;"><span class="noprint plainlinksneverexpand" style="white-space:nowrap;font-size:xx-small;float:left;text-align:left;width:3.8em">&#160;<a href="/wiki/%D0%A8%D0%B0%D0%B1%D0%BB%D0%BE%D0%BD:%D0%9A%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D1%8B_Unix" title="Просмотр этого шаблона"><img alt="Просмотр этого шаблона" src="//upload.wikimedia.org/wikipedia/commons/thumb/6/61/Searchtool.svg/14px-Searchtool.svg.png" width="14" height="14" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/6/61/Searchtool.svg/21px-Searchtool.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/6/61/Searchtool.svg/28px-Searchtool.svg.png 2x" data-file-width="512" data-file-height="512" /></a>&#160;</span><span style="font-size:110%">Команды Unix</span></th>
+</tr>
+<tr>
+<td style="text-align:center;" colspan="2">
+<table class="navbox collapsible collapsed nowraplinks" style="margin:auto;;">
+<tr>
+<th colspan="2" style="text-align:center;width:100%;background-color: #fafafa;"><span class="noprint plainlinksneverexpand" style="white-space:nowrap;font-size:xx-small;float:left;text-align:left;width:3.8em">&#160;<a href="/wiki/%D0%A8%D0%B0%D0%B1%D0%BB%D0%BE%D0%BD:POSIX.1-2008" title="Просмотр этого шаблона"><img alt="Просмотр этого шаблона" src="//upload.wikimedia.org/wikipedia/commons/thumb/6/61/Searchtool.svg/14px-Searchtool.svg.png" width="14" height="14" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/6/61/Searchtool.svg/21px-Searchtool.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/6/61/Searchtool.svg/28px-Searchtool.svg.png 2x" data-file-width="512" data-file-height="512" /></a>&#160;</span><span style="font-size:110%"><a href="/wiki/POSIX" title="POSIX">POSIX.1-2008</a></span></th>
+</tr>
+<tr>
+<th style="white-space:nowrap;background:#DDDDFF">Утилиты POSIX.1-2008</th>
+<td style="width:100%"><a href="/w/index.php?title=Admin&amp;action=edit&amp;redlink=1" class="new" title="Admin (страница отсутствует)">admin</a>&#160;• <a href="/wiki/Alias_(bash)" title="Alias (bash)">alias</a>&#160;• <a href="/wiki/Ar_(Unix)" title="Ar (Unix)">ar</a>&#160;• <a href="/w/index.php?title=Asa&amp;action=edit&amp;redlink=1" class="new" title="Asa (страница отсутствует)">asa</a>&#160;• <a href="/wiki/At" title="At">at</a>&#160;• <a href="/wiki/Awk" title="Awk" class="mw-redirect">awk</a>&#160;• <a href="/wiki/Basename" title="Basename">basename</a>&#160;• <a href="/w/index.php?title=Batch&amp;action=edit&amp;redlink=1" class="new" title="Batch (страница отсутствует)">batch</a>&#160;• <a href="/wiki/Bc" title="Bc">bc</a>&#160;• <a href="/w/index.php?title=Bg&amp;action=edit&amp;redlink=1" class="new" title="Bg (страница отсутствует)">bg</a>&#160;• <a href="/w/index.php?title=C99_(%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D0%B0)&amp;action=edit&amp;redlink=1" class="new" title="C99 (команда) (страница отсутствует)">c99</a>&#160;• <a href="/wiki/Cal" title="Cal">cal</a>&#160;• <a href="/wiki/Cat" title="Cat">cat</a>&#160;• <a href="/wiki/Cd_(%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D0%B0)" title="Cd (команда)">cd</a>&#160;• <a href="/w/index.php?title=Cflow&amp;action=edit&amp;redlink=1" class="new" title="Cflow (страница отсутствует)">cflow</a>&#160;• <a href="/wiki/Chgrp" title="Chgrp">chgrp</a>&#160;• <a href="/wiki/Chmod" title="Chmod">chmod</a>&#160;• <a href="/wiki/Chown" title="Chown">chown</a>&#160;• <a href="/wiki/Cksum" title="Cksum">cksum</a>&#160;• <a href="/wiki/Cmp" title="Cmp">cmp</a>&#160;• <a href="/wiki/Comm" title="Comm">comm</a>&#160;• <a href="/w/index.php?title=Command_(Unix)&amp;action=edit&amp;redlink=1" class="new" title="Command (Unix) (страница отсутствует)">command</a>&#160;• <a href="/w/index.php?title=Compress&amp;action=edit&amp;redlink=1" class="new" title="Compress (страница отсутствует)">compress</a>&#160;• <a href="/wiki/Cp" title="Cp">cp</a>&#160;• <a href="/wiki/Crontab" title="Crontab" class="mw-redirect">crontab</a>&#160;• <a href="/w/index.php?title=Csplit&amp;action=edit&amp;redlink=1" class="new" title="Csplit (страница отсутствует)">csplit</a>&#160;• <a href="/wiki/Ctags" title="Ctags">ctags</a>&#160;• <a href="/wiki/Cut" title="Cut">cut</a>&#160;• <a href="/w/index.php?title=Cxref&amp;action=edit&amp;redlink=1" class="new" title="Cxref (страница отсутствует)">cxref</a>&#160;• <a href="/wiki/Date" title="Date">date</a>&#160;• <a href="/wiki/Dd" title="Dd">dd</a>&#160;• <a href="/w/index.php?title=Delta_(Unix)&amp;action=edit&amp;redlink=1" class="new" title="Delta (Unix) (страница отсутствует)">delta</a>&#160;• <a href="/wiki/Df" title="Df">df</a>&#160;• <a href="/wiki/Diff" title="Diff">diff</a>&#160;• <a href="/wiki/Dirname" title="Dirname">dirname</a>&#160;• <a href="/wiki/Du" title="Du">du</a>&#160;• <a href="/wiki/Echo" title="Echo">echo</a>&#160;• <a href="/wiki/Ed" title="Ed">ed</a>&#160;• <a href="/wiki/Env" title="Env">env</a>&#160;• <a href="/wiki/Ex_(Unix)" title="Ex (Unix)">ex</a>&#160;• <a href="/wiki/Expand" title="Expand">expand</a>&#160;• <a href="/wiki/Expr" title="Expr">expr</a>&#160;• <a href="/wiki/False" title="False">false</a>&#160;• <a href="/wiki/Fc_(Unix)" title="Fc (Unix)">fc</a>&#160;• <a href="/wiki/Fg" title="Fg">fg</a>&#160;• <a href="/wiki/File_(Unix)" title="File (Unix)">file</a>&#160;• <strong class="selflink">find</strong>&#160;• <a href="/w/index.php?title=Fold&amp;action=edit&amp;redlink=1" class="new" title="Fold (страница отсутствует)">fold</a>&#160;• <a href="/w/index.php?title=Fort77&amp;action=edit&amp;redlink=1" class="new" title="Fort77 (страница отсутствует)">fort77</a>&#160;• <a href="/wiki/Fuser" title="Fuser">fuser</a>&#160;• <a href="/w/index.php?title=Gencat&amp;action=edit&amp;redlink=1" class="new" title="Gencat (страница отсутствует)">gencat</a>&#160;• <a href="/w/index.php?title=Get&amp;action=edit&amp;redlink=1" class="new" title="Get (страница отсутствует)">get</a>&#160;• <a href="/w/index.php?title=Getconf&amp;action=edit&amp;redlink=1" class="new" title="Getconf (страница отсутствует)">getconf</a>&#160;• <a href="/w/index.php?title=Getopts&amp;action=edit&amp;redlink=1" class="new" title="Getopts (страница отсутствует)">getopts</a>&#160;• <a href="/wiki/Grep" title="Grep">grep</a>&#160;• <a href="/wiki/Hash" title="Hash" class="mw-redirect">hash</a>&#160;• <a href="/wiki/Head_(Unix)" title="Head (Unix)">head</a>&#160;• <a href="/wiki/Iconv" title="Iconv">iconv</a>&#160;• <a href="/wiki/Id" title="Id">id</a>&#160;• <a href="/w/index.php?title=Ipcrm&amp;action=edit&amp;redlink=1" class="new" title="Ipcrm (страница отсутствует)">ipcrm</a>&#160;• <a href="/w/index.php?title=Ipcs&amp;action=edit&amp;redlink=1" class="new" title="Ipcs (страница отсутствует)">ipcs</a>&#160;• <a href="/w/index.php?title=Jobs&amp;action=edit&amp;redlink=1" class="new" title="Jobs (страница отсутствует)">jobs</a>&#160;• <a href="/wiki/Join_(Unix)" title="Join (Unix)">join</a>&#160;• <a href="/wiki/Kill" title="Kill">kill</a>&#160;• <a href="/wiki/Lex" title="Lex">lex</a>&#160;• <a href="/w/index.php?title=Link_(Unix)&amp;action=edit&amp;redlink=1" class="new" title="Link (Unix) (страница отсутствует)">link</a>&#160;• <a href="/wiki/Ln_(UNIX)" title="Ln (UNIX)">ln</a>&#160;• <a href="/wiki/Locale" title="Locale">locale</a>&#160;• <a href="/w/index.php?title=Localedef&amp;action=edit&amp;redlink=1" class="new" title="Localedef (страница отсутствует)">localedef</a>&#160;• <a href="/wiki/Logger" title="Logger">logger</a>&#160;• <a href="/wiki/Logname" title="Logname">logname</a>&#160;• <a href="/wiki/Lp" title="Lp">lp</a>&#160;• <a href="/wiki/Ls" title="Ls">ls</a>&#160;• <a href="/wiki/%D0%9C%D0%B0%D0%BA%D1%80%D0%BE%D0%BF%D1%80%D0%BE%D1%86%D0%B5%D1%81%D1%81%D0%BE%D1%80_m4" title="Макропроцессор m4">m4</a>&#160;• <a href="/w/index.php?title=Mailx&amp;action=edit&amp;redlink=1" class="new" title="Mailx (страница отсутствует)">mailx</a>&#160;• <a href="/wiki/Make" title="Make">make</a>&#160;• <a href="/wiki/Man" title="Man">man</a>&#160;• <a href="/wiki/Mesg" title="Mesg">mesg</a>&#160;• <a href="/wiki/Mkdir" title="Mkdir">mkdir</a>&#160;• <a href="/wiki/Mkfifo" title="Mkfifo" class="mw-redirect">mkfifo</a>&#160;• <a href="/wiki/More" title="More">more</a>&#160;• <a href="/wiki/Mv" title="Mv">mv</a>&#160;• <a href="/w/index.php?title=Newgrp&amp;action=edit&amp;redlink=1" class="new" title="Newgrp (страница отсутствует)">newgrp</a>&#160;• <a href="/wiki/Nice" title="Nice">nice</a>&#160;• <a href="/wiki/Nl" title="Nl">nl</a>&#160;• <a href="/wiki/Nm" title="Nm">nm</a>&#160;• <a href="/wiki/Nohup" title="Nohup">nohup</a>&#160;• <a href="/wiki/Od" title="Od">od</a>&#160;• <a href="/wiki/Paste" title="Paste">paste</a>&#160;• <a href="/wiki/Patch_(UNIX)" title="Patch (UNIX)">patch</a>&#160;• <a href="/w/index.php?title=Pathchk&amp;action=edit&amp;redlink=1" class="new" title="Pathchk (страница отсутствует)">pathchk</a>&#160;• <a href="/wiki/Pax_(Unix)" title="Pax (Unix)">pax</a>&#160;• <a href="/w/index.php?title=Pr_(Unix)&amp;action=edit&amp;redlink=1" class="new" title="Pr (Unix) (страница отсутствует)">pr</a>&#160;• <a href="/wiki/Printf" title="Printf">printf</a>&#160;• <a href="/w/index.php?title=Prs&amp;action=edit&amp;redlink=1" class="new" title="Prs (страница отсутствует)">prs</a>&#160;• <a href="/wiki/Ps" title="Ps">ps</a>&#160;• <a href="/wiki/Pwd" title="Pwd">pwd</a>&#160;• <a href="/w/index.php?title=Qalter&amp;action=edit&amp;redlink=1" class="new" title="Qalter (страница отсутствует)">qalter</a>&#160;• <a href="/w/index.php?title=Qdel&amp;action=edit&amp;redlink=1" class="new" title="Qdel (страница отсутствует)">qdel</a>&#160;• <a href="/w/index.php?title=Qhold&amp;action=edit&amp;redlink=1" class="new" title="Qhold (страница отсутствует)">qhold</a>&#160;• <a href="/w/index.php?title=Qmove&amp;action=edit&amp;redlink=1" class="new" title="Qmove (страница отсутствует)">qmove</a>&#160;• <a href="/w/index.php?title=Qmsg&amp;action=edit&amp;redlink=1" class="new" title="Qmsg (страница отсутствует)">qmsg</a>&#160;• <a href="/w/index.php?title=Qrerun&amp;action=edit&amp;redlink=1" class="new" title="Qrerun (страница отсутствует)">qrerun</a>&#160;• <a href="/w/index.php?title=Qrls&amp;action=edit&amp;redlink=1" class="new" title="Qrls (страница отсутствует)">qrls</a>&#160;• <a href="/w/index.php?title=Qselect&amp;action=edit&amp;redlink=1" class="new" title="Qselect (страница отсутствует)">qselect</a>&#160;• <a href="/w/index.php?title=Qsig&amp;action=edit&amp;redlink=1" class="new" title="Qsig (страница отсутствует)">qsig</a>&#160;• <a href="/w/index.php?title=Qstat&amp;action=edit&amp;redlink=1" class="new" title="Qstat (страница отсутствует)">qstat</a>&#160;• <a href="/w/index.php?title=Qsub&amp;action=edit&amp;redlink=1" class="new" title="Qsub (страница отсутствует)">qsub</a>&#160;• <a href="/wiki/Read" title="Read" class="mw-redirect">read</a>&#160;• <a href="/wiki/Renice" title="Renice">renice</a>&#160;• <a href="/wiki/Rm" title="Rm">rm</a>&#160;• <a href="/w/index.php?title=Rmdel&amp;action=edit&amp;redlink=1" class="new" title="Rmdel (страница отсутствует)">rmdel</a>&#160;• <a href="/wiki/Rmdir" title="Rmdir">rmdir</a>&#160;• <a href="/w/index.php?title=Sact&amp;action=edit&amp;redlink=1" class="new" title="Sact (страница отсутствует)">sact</a>&#160;• <a href="/w/index.php?title=Sccs&amp;action=edit&amp;redlink=1" class="new" title="Sccs (страница отсутствует)">sccs</a>&#160;• <a href="/wiki/Sed" title="Sed">sed</a>&#160;• <a href="/wiki/Bash" title="Bash">sh</a>&#160;• <a href="/wiki/Sleep" title="Sleep">sleep</a>&#160;• <a href="/wiki/Sort" title="Sort">sort</a>&#160;• <a href="/wiki/Split" title="Split">split</a>&#160;• <a href="/wiki/Strings" title="Strings">strings</a>&#160;• <a href="/wiki/Strip" title="Strip">strip</a>&#160;• <a href="/w/index.php?title=Stty&amp;action=edit&amp;redlink=1" class="new" title="Stty (страница отсутствует)">stty</a>&#160;• <a href="/w/index.php?title=Tabs&amp;action=edit&amp;redlink=1" class="new" title="Tabs (страница отсутствует)">tabs</a>&#160;• <a href="/wiki/Tail" title="Tail">tail</a>&#160;• <a href="/wiki/Talk" title="Talk">talk</a>&#160;• <a href="/wiki/Tee" title="Tee">tee</a>&#160;• <a href="/wiki/Test" title="Test">test</a>&#160;• <a href="/wiki/Time_(Unix)" title="Time (Unix)">time</a>&#160;• <a href="/wiki/Touch" title="Touch">touch</a>&#160;• <a href="/w/index.php?title=Tput&amp;action=edit&amp;redlink=1" class="new" title="Tput (страница отсутствует)">tput</a>&#160;• <a href="/wiki/Tr" title="Tr">tr</a>&#160;• <a href="/wiki/True" title="True">true</a>&#160;• <a href="/w/index.php?title=Tsort&amp;action=edit&amp;redlink=1" class="new" title="Tsort (страница отсутствует)">tsort</a>&#160;• <a href="/wiki/Tty_(UNIX)" title="Tty (UNIX)">tty</a>&#160;• <a href="/w/index.php?title=Type&amp;action=edit&amp;redlink=1" class="new" title="Type (страница отсутствует)">type</a>&#160;• <a href="/w/index.php?title=Ulimit&amp;action=edit&amp;redlink=1" class="new" title="Ulimit (страница отсутствует)">ulimit</a>&#160;• <a href="/wiki/Umask" title="Umask">umask</a>&#160;• <a href="/w/index.php?title=Unalias&amp;action=edit&amp;redlink=1" class="new" title="Unalias (страница отсутствует)">unalias</a>&#160;• <a href="/wiki/Uname" title="Uname">uname</a>&#160;• <a href="/w/index.php?title=Uncompress&amp;action=edit&amp;redlink=1" class="new" title="Uncompress (страница отсутствует)">uncompress</a>&#160;• <a href="/wiki/Unexpand" title="Unexpand">unexpand</a>&#160;• <a href="/w/index.php?title=Unget&amp;action=edit&amp;redlink=1" class="new" title="Unget (страница отсутствует)">unget</a>&#160;• <a href="/wiki/Uniq" title="Uniq">uniq</a>&#160;• <a href="/w/index.php?title=Unlink&amp;action=edit&amp;redlink=1" class="new" title="Unlink (страница отсутствует)">unlink</a>&#160;• <a href="/wiki/Uucp" title="Uucp">uucp</a>&#160;• <a href="/wiki/Uudecode" title="Uudecode" class="mw-redirect">uudecode</a>&#160;• <a href="/wiki/Uuencode" title="Uuencode" class="mw-redirect">uuencode</a>&#160;• <a href="/w/index.php?title=Uustat&amp;action=edit&amp;redlink=1" class="new" title="Uustat (страница отсутствует)">uustat</a>&#160;• <a href="/w/index.php?title=Uux&amp;action=edit&amp;redlink=1" class="new" title="Uux (страница отсутствует)">uux</a>&#160;• <a href="/w/index.php?title=Val&amp;action=edit&amp;redlink=1" class="new" title="Val (страница отсутствует)">val</a>&#160;• <a href="/wiki/Vi" title="Vi">vi</a>&#160;• <a href="/wiki/Wait_(%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D0%B0)" title="Wait (команда)">wait</a>&#160;• <a href="/wiki/Wc" title="Wc">wc</a>&#160;• <a href="/w/index.php?title=What&amp;action=edit&amp;redlink=1" class="new" title="What (страница отсутствует)">what</a>&#160;• <a href="/wiki/Who" title="Who">who</a>&#160;• <a href="/wiki/Write" title="Write">write</a>&#160;• <a href="/wiki/Xargs" title="Xargs">xargs</a>&#160;• <a href="/wiki/Yacc" title="Yacc">yacc</a>&#160;• <a href="/w/index.php?title=Zcat&amp;action=edit&amp;redlink=1" class="new" title="Zcat (страница отсутствует)">zcat</a></td>
+</tr>
+</table>
+<table class="navbox collapsible collapsed nowraplinks" style="margin:auto;;">
+<tr>
+<th colspan="2" style="text-align:center;width:100%;background-color: #fafafa;"><span class="noprint plainlinksneverexpand" style="white-space:nowrap;font-size:xx-small;float:left;text-align:left;width:3.8em">&#160;<a href="/wiki/%D0%A8%D0%B0%D0%B1%D0%BB%D0%BE%D0%BD:GNU_Coreutils" title="Просмотр этого шаблона"><img alt="Просмотр этого шаблона" src="//upload.wikimedia.org/wikipedia/commons/thumb/6/61/Searchtool.svg/14px-Searchtool.svg.png" width="14" height="14" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/6/61/Searchtool.svg/21px-Searchtool.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/6/61/Searchtool.svg/28px-Searchtool.svg.png 2x" data-file-width="512" data-file-height="512" /></a>&#160;</span><span style="font-size:110%"><a href="/wiki/GNU_Coreutils" title="GNU Coreutils">GNU Coreutils</a></span></th>
+</tr>
+<tr>
+<th style="white-space:nowrap;background:#DDDDFF">Файловые утилиты</th>
+<td style="width:100%"><a href="/wiki/Chgrp" title="Chgrp">chgrp</a>&#160;• <a href="/wiki/Chown" title="Chown">chown</a>&#160;• <a href="/wiki/Chmod" title="Chmod">chmod</a>&#160;• <a href="/wiki/Cp" title="Cp">cp</a>&#160;• <a href="/wiki/Dd" title="Dd">dd</a>&#160;• <a href="/wiki/Df" title="Df">df</a>&#160;• <a href="/w/index.php?title=Dir&amp;action=edit&amp;redlink=1" class="new" title="Dir (страница отсутствует)">dir</a>&#160;• <a href="/w/index.php?title=Dircolors&amp;action=edit&amp;redlink=1" class="new" title="Dircolors (страница отсутствует)">dircolors</a>&#160;• <a href="/w/index.php?title=Install&amp;action=edit&amp;redlink=1" class="new" title="Install (страница отсутствует)">install</a>&#160;• <a href="/wiki/Ln_(UNIX)" title="Ln (UNIX)">ln</a>&#160;• <a href="/wiki/Ls" title="Ls">ls</a>&#160;• <a href="/wiki/Mkdir" title="Mkdir">mkdir</a>&#160;• <a href="/wiki/Mkfifo" title="Mkfifo" class="mw-redirect">mkfifo</a>&#160;• <a href="/w/index.php?title=Mknod&amp;action=edit&amp;redlink=1" class="new" title="Mknod (страница отсутствует)">mknod</a>&#160;• <a href="/wiki/Mv" title="Mv">mv</a>&#160;• <a href="/wiki/Rm" title="Rm">rm</a>&#160;• <a href="/wiki/Rmdir" title="Rmdir">rmdir</a>&#160;• <a href="/w/index.php?title=Shred&amp;action=edit&amp;redlink=1" class="new" title="Shred (страница отсутствует)">shred</a>&#160;• <a href="/w/index.php?title=Sync&amp;action=edit&amp;redlink=1" class="new" title="Sync (страница отсутствует)">sync</a>&#160;• <a href="/wiki/Touch" title="Touch">touch</a>&#160;• <a href="/w/index.php?title=Vdir&amp;action=edit&amp;redlink=1" class="new" title="Vdir (страница отсутствует)">vdir</a></td>
+</tr>
+<tr>
+<th style="white-space:nowrap;background:#DDDDFF">Текстовые утилиты</th>
+<td style="width:100%;background:#F0F0F0"><a href="/wiki/Cat" title="Cat">cat</a>&#160;• <a href="/wiki/Cksum" title="Cksum">cksum</a>&#160;• <a href="/wiki/Comm" title="Comm">comm</a>&#160;• <a href="/w/index.php?title=Csplit&amp;action=edit&amp;redlink=1" class="new" title="Csplit (страница отсутствует)">csplit</a>&#160;• <a href="/wiki/Cut" title="Cut">cut</a>&#160;• <a href="/wiki/Expand" title="Expand">expand</a>&#160;• <a href="/wiki/Fmt" title="Fmt">fmt</a>&#160;• <a href="/w/index.php?title=Fold&amp;action=edit&amp;redlink=1" class="new" title="Fold (страница отсутствует)">fold</a>&#160;• <a href="/w/index.php?title=Head_(UNIX)&amp;action=edit&amp;redlink=1" class="new" title="Head (UNIX) (страница отсутствует)">head</a>&#160;• <a href="/w/index.php?title=Join_(UNIX)&amp;action=edit&amp;redlink=1" class="new" title="Join (UNIX) (страница отсутствует)">join</a>&#160;• <a href="/wiki/Md5sum" title="Md5sum">md5sum</a>&#160;• <a href="/wiki/Nl" title="Nl">nl</a>&#160;• <a href="/wiki/Od" title="Od">od</a>&#160;• <a href="/wiki/Paste" title="Paste">paste</a>&#160;• <a href="/w/index.php?title=Ptx&amp;action=edit&amp;redlink=1" class="new" title="Ptx (страница отсутствует)">ptx</a>&#160;• <a href="/w/index.php?title=Pr_(UNIX)&amp;action=edit&amp;redlink=1" class="new" title="Pr (UNIX) (страница отсутствует)">pr</a>&#160;• <a href="/wiki/Sha1sum" title="Sha1sum">sha1sum</a>&#160;• <a href="/wiki/Sort" title="Sort">sort</a>&#160;• <a href="/wiki/Split" title="Split">split</a>&#160;• <a href="/w/index.php?title=Sum_(UNIX)&amp;action=edit&amp;redlink=1" class="new" title="Sum (UNIX) (страница отсутствует)">sum</a>&#160;• <a href="/w/index.php?title=Tac&amp;action=edit&amp;redlink=1" class="new" title="Tac (страница отсутствует)">tac</a>&#160;• <a href="/wiki/Tail" title="Tail">tail</a>&#160;• <a href="/wiki/Tr" title="Tr">tr</a>&#160;• <a href="/w/index.php?title=Tsort&amp;action=edit&amp;redlink=1" class="new" title="Tsort (страница отсутствует)">tsort</a>&#160;• <a href="/wiki/Unexpand" title="Unexpand">unexpand</a>&#160;• <a href="/wiki/Uniq" title="Uniq">uniq</a>&#160;• <a href="/wiki/Wc" title="Wc">wc</a></td>
+</tr>
+<tr>
+<th style="white-space:nowrap;background:#DDDDFF">Shell-утилиты</th>
+<td style="width:100%"><a href="/wiki/Basename" title="Basename">basename</a>&#160;• <a href="/wiki/Chroot" title="Chroot">chroot</a>&#160;• <a href="/wiki/Date" title="Date">date</a>&#160;• <a href="/wiki/Dirname" title="Dirname">dirname</a>&#160;• <a href="/wiki/Du" title="Du">du</a>&#160;• <a href="/wiki/Echo" title="Echo">echo</a>&#160;• <a href="/wiki/Env" title="Env">env</a>&#160;• <a href="/wiki/Expr" title="Expr">expr</a>&#160;• <a href="/wiki/Factor" title="Factor" class="mw-redirect">factor</a>&#160;• <a href="/wiki/False" title="False">false</a>&#160;• <a href="/w/index.php?title=Groups&amp;action=edit&amp;redlink=1" class="new" title="Groups (страница отсутствует)">groups</a>&#160;• <a href="/w/index.php?title=Hostid&amp;action=edit&amp;redlink=1" class="new" title="Hostid (страница отсутствует)">hostid</a>&#160;• <a href="/wiki/Id" title="Id">id</a>&#160;• <a href="/wiki/Link" title="Link" class="mw-redirect">link</a>&#160;• <a href="/wiki/Logname" title="Logname">logname</a>&#160;• <a href="/wiki/Nice" title="Nice">nice</a>&#160;• <a href="/wiki/Nohup" title="Nohup">nohup</a>&#160;• <a href="/w/index.php?title=Pathchk&amp;action=edit&amp;redlink=1" class="new" title="Pathchk (страница отсутствует)">pathchk</a>&#160;• <a href="/w/index.php?title=Pinky&amp;action=edit&amp;redlink=1" class="new" title="Pinky (страница отсутствует)">pinky</a>&#160;• <a href="/w/index.php?title=Printenv&amp;action=edit&amp;redlink=1" class="new" title="Printenv (страница отсутствует)">printenv</a>&#160;• <a href="/wiki/Printf" title="Printf">printf</a>&#160;• <a href="/wiki/Pwd" title="Pwd">pwd</a>&#160;• <a href="/w/index.php?title=Readlink&amp;action=edit&amp;redlink=1" class="new" title="Readlink (страница отсутствует)">readlink</a>&#160;• <a href="/w/index.php?title=Seq&amp;action=edit&amp;redlink=1" class="new" title="Seq (страница отсутствует)">seq</a>&#160;• <a href="/wiki/Sleep" title="Sleep">sleep</a>&#160;• <a href="/w/index.php?title=Stat&amp;action=edit&amp;redlink=1" class="new" title="Stat (страница отсутствует)">stat</a>&#160;• <a href="/w/index.php?title=Stty&amp;action=edit&amp;redlink=1" class="new" title="Stty (страница отсутствует)">stty</a>&#160;• <a href="/wiki/Tee" title="Tee">tee</a>&#160;• <a href="/wiki/Test" title="Test">test</a>&#160;• <a href="/wiki/True" title="True">true</a>&#160;• <a href="/wiki/Tty_(UNIX)" title="Tty (UNIX)">tty</a>&#160;• <a href="/wiki/Uname" title="Uname">uname</a>&#160;• <a href="/w/index.php?title=Unlink&amp;action=edit&amp;redlink=1" class="new" title="Unlink (страница отсутствует)">unlink</a>&#160;• <a href="/wiki/Users" title="Users">users</a>&#160;• <a href="/wiki/Who" title="Who">who</a>&#160;• <a href="/wiki/Whoami" title="Whoami">whoami</a>&#160;• <a href="/wiki/Yes_(Unix)" title="Yes (Unix)">yes</a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table class="navbox collapsible autocollapse nowraplinks" style="margin:auto;;">
+<tr>
+<th colspan="2" style="text-align:center;width:100%;"><span class="noprint plainlinksneverexpand" style="white-space:nowrap;font-size:xx-small;float:left;text-align:left;width:3.8em">&#160;<a href="/wiki/%D0%A8%D0%B0%D0%B1%D0%BB%D0%BE%D0%BD:%D0%9A%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D1%8B_%D0%BE%D0%BF%D0%B5%D1%80%D0%B0%D1%86%D0%B8%D0%BE%D0%BD%D0%BD%D1%8B%D1%85_%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC_Microsoft" title="Просмотр этого шаблона"><img alt="Просмотр этого шаблона" src="//upload.wikimedia.org/wikipedia/commons/thumb/6/61/Searchtool.svg/14px-Searchtool.svg.png" width="14" height="14" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/6/61/Searchtool.svg/21px-Searchtool.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/6/61/Searchtool.svg/28px-Searchtool.svg.png 2x" data-file-width="512" data-file-height="512" /></a>&#160;</span><span style="font-size:110%">Общие команды <a href="/wiki/MS-DOS" title="MS-DOS">MS-DOS</a> и <a href="/wiki/Microsoft_Windows" title="Microsoft Windows" class="mw-redirect">Windows</a></span></th>
+</tr>
+<tr>
+<td style="text-align:center;" colspan="2"><a href="/w/index.php?title=Append&amp;action=edit&amp;redlink=1" class="new" title="Append (страница отсутствует)">Append</a>&#160;• <a href="/w/index.php?title=Attrib&amp;action=edit&amp;redlink=1" class="new" title="Attrib (страница отсутствует)">Attrib</a>&#160;• <a href="/w/index.php?title=Break_(%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D0%B0)&amp;action=edit&amp;redlink=1" class="new" title="Break (команда) (страница отсутствует)">Break</a>&#160;• <a href="/w/index.php?title=Call&amp;action=edit&amp;redlink=1" class="new" title="Call (страница отсутствует)">Call</a>&#160;• <a href="/wiki/Cd_(%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D0%B0)" title="Cd (команда)">Cd</a> (Chdir)&#160;• <a href="/w/index.php?title=Chcp&amp;action=edit&amp;redlink=1" class="new" title="Chcp (страница отсутствует)">Chcp</a>&#160;• <a href="/w/index.php?title=Chkdsk&amp;action=edit&amp;redlink=1" class="new" title="Chkdsk (страница отсутствует)">Chkdsk</a>&#160;• <a href="/w/index.php?title=Cls&amp;action=edit&amp;redlink=1" class="new" title="Cls (страница отсутствует)">Cls</a>&#160;• <a href="/wiki/COMMAND.COM" title="COMMAND.COM">Command</a>&#160;• <a href="/w/index.php?title=Copy_(%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D0%B0)&amp;action=edit&amp;redlink=1" class="new" title="Copy (команда) (страница отсутствует)">Copy</a>&#160;• <a href="/w/index.php?title=Date_(%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D0%B0)&amp;action=edit&amp;redlink=1" class="new" title="Date (команда) (страница отсутствует)">Date</a>&#160;• <a href="/wiki/Debug" title="Debug">Debug</a>&#160;• <a href="/wiki/%D0%94%D0%B5%D1%84%D1%80%D0%B0%D0%B3%D0%BC%D0%B5%D0%BD%D1%82%D0%B0%D1%86%D0%B8%D1%8F_%D0%B4%D0%B8%D1%81%D0%BA%D0%B0_(%D0%BA%D0%BE%D0%BC%D0%BF%D0%BE%D0%BD%D0%B5%D0%BD%D1%82_Windows)" title="Дефрагментация диска (компонент Windows)">Defrag</a>&#160;• <a href="/wiki/Del_(%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D0%B0)" title="Del (команда)">Del</a>&#160;• <a href="/w/index.php?title=Dir&amp;action=edit&amp;redlink=1" class="new" title="Dir (страница отсутствует)">Dir</a>&#160;• <a href="/w/index.php?title=Diskcomp&amp;action=edit&amp;redlink=1" class="new" title="Diskcomp (страница отсутствует)">Diskcomp</a>&#160;• <a href="/w/index.php?title=Diskcopy&amp;action=edit&amp;redlink=1" class="new" title="Diskcopy (страница отсутствует)">Diskcopy</a>&#160;• <a href="/wiki/Diskpart" title="Diskpart">Diskpart</a>&#160;• <a href="/w/index.php?title=Doskey&amp;action=edit&amp;redlink=1" class="new" title="Doskey (страница отсутствует)">Doskey</a>&#160;• <a href="/w/index.php?title=Echo_(%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D0%B0)&amp;action=edit&amp;redlink=1" class="new" title="Echo (команда) (страница отсутствует)">Echo</a>&#160;• <a href="/w/index.php?title=Edit_(%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D0%B0)&amp;action=edit&amp;redlink=1" class="new" title="Edit (команда) (страница отсутствует)">Edit</a>&#160;• <a href="/w/index.php?title=Edlin&amp;action=edit&amp;redlink=1" class="new" title="Edlin (страница отсутствует)">Edlin</a>&#160;• <a href="/w/index.php?title=Erase&amp;action=edit&amp;redlink=1" class="new" title="Erase (страница отсутствует)">Erase</a>&#160;• <a href="/wiki/Exit" title="Exit">Exit</a>&#160;• <a href="/wiki/Expand" title="Expand">Expand</a>&#160;• <a href="/w/index.php?title=Fastopen&amp;action=edit&amp;redlink=1" class="new" title="Fastopen (страница отсутствует)">Fastopen</a>&#160;• <a href="/w/index.php?title=Fc_(%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D0%B0)&amp;action=edit&amp;redlink=1" class="new" title="Fc (команда) (страница отсутствует)">Fc</a>&#160;• <a href="/w/index.php?title=Find_(%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D0%B0)&amp;action=edit&amp;redlink=1" class="new" title="Find (команда) (страница отсутствует)">Find</a>&#160;• <a href="/w/index.php?title=For_(%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D0%B0)&amp;action=edit&amp;redlink=1" class="new" title="For (команда) (страница отсутствует)">For</a>&#160;• <a href="/w/index.php?title=Format&amp;action=edit&amp;redlink=1" class="new" title="Format (страница отсутствует)">Format</a>&#160;• <a href="/wiki/Goto" title="Goto">Goto</a>&#160;• <a href="/w/index.php?title=Graphics&amp;action=edit&amp;redlink=1" class="new" title="Graphics (страница отсутствует)">Graphics</a>&#160;• <a href="/w/index.php?title=Help&amp;action=edit&amp;redlink=1" class="new" title="Help (страница отсутствует)">Help</a>&#160;• <a href="/w/index.php?title=If_(%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D0%B0)&amp;action=edit&amp;redlink=1" class="new" title="If (команда) (страница отсутствует)">If</a>&#160;• <a href="/w/index.php?title=Label&amp;action=edit&amp;redlink=1" class="new" title="Label (страница отсутствует)">Label</a>&#160;• <a href="/w/index.php?title=Loadfix&amp;action=edit&amp;redlink=1" class="new" title="Loadfix (страница отсутствует)">Loadfix</a>&#160;• <a href="/w/index.php?title=Md&amp;action=edit&amp;redlink=1" class="new" title="Md (страница отсутствует)">Md</a>&#160;• <a href="/w/index.php?title=Mem&amp;action=edit&amp;redlink=1" class="new" title="Mem (страница отсутствует)">Mem</a>&#160;• <a href="/wiki/Mkdir" title="Mkdir">Mkdir</a>&#160;• <a href="/w/index.php?title=Mode&amp;action=edit&amp;redlink=1" class="new" title="Mode (страница отсутствует)">Mode</a>&#160;• <a href="/wiki/More" title="More">More</a>&#160;• <a href="/w/index.php?title=Move_(%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D0%B0)&amp;action=edit&amp;redlink=1" class="new" title="Move (команда) (страница отсутствует)">Move</a>&#160;• <a href="/w/index.php?title=Nlsfunc&amp;action=edit&amp;redlink=1" class="new" title="Nlsfunc (страница отсутствует)">Nlsfunc</a>&#160;• <a href="/w/index.php?title=Path_(%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D0%B0)&amp;action=edit&amp;redlink=1" class="new" title="Path (команда) (страница отсутствует)">Path</a>&#160;• <a href="/w/index.php?title=Pause&amp;action=edit&amp;redlink=1" class="new" title="Pause (страница отсутствует)">Pause</a>&#160;• <a href="/w/index.php?title=Print&amp;action=edit&amp;redlink=1" class="new" title="Print (страница отсутствует)">Print</a>&#160;• <a href="/w/index.php?title=Prompt&amp;action=edit&amp;redlink=1" class="new" title="Prompt (страница отсутствует)">Prompt</a>&#160;• <a href="/w/index.php?title=Rd_(%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D0%B0)&amp;action=edit&amp;redlink=1" class="new" title="Rd (команда) (страница отсутствует)">Rd</a>&#160;• <a href="/w/index.php?title=Rem_(%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D0%B0)&amp;action=edit&amp;redlink=1" class="new" title="Rem (команда) (страница отсутствует)">Rem</a>&#160;• <a href="/w/index.php?title=Ren&amp;action=edit&amp;redlink=1" class="new" title="Ren (страница отсутствует)">Ren</a>&#160;• <a href="/w/index.php?title=Rename&amp;action=edit&amp;redlink=1" class="new" title="Rename (страница отсутствует)">Rename</a>&#160;• <a href="/w/index.php?title=Replace&amp;action=edit&amp;redlink=1" class="new" title="Replace (страница отсутствует)">Replace</a>&#160;• <a href="/wiki/Rmdir" title="Rmdir">Rmdir</a>&#160;• <a href="/w/index.php?title=Set&amp;action=edit&amp;redlink=1" class="new" title="Set (страница отсутствует)">Set</a>&#160;• <a href="/w/index.php?title=Setver&amp;action=edit&amp;redlink=1" class="new" title="Setver (страница отсутствует)">Setver</a>&#160;• <a href="/w/index.php?title=Share&amp;action=edit&amp;redlink=1" class="new" title="Share (страница отсутствует)">Share</a>&#160;• <a href="/w/index.php?title=Shift_(%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D0%B0)&amp;action=edit&amp;redlink=1" class="new" title="Shift (команда) (страница отсутствует)">Shift</a>&#160;• <a href="/w/index.php?title=Sort_(%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D0%B0)&amp;action=edit&amp;redlink=1" class="new" title="Sort (команда) (страница отсутствует)">Sort</a>&#160;• <a href="/wiki/Subst" title="Subst">Subst</a>&#160;• <a href="/w/index.php?title=Time_(%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D0%B0_%D0%9E%D0%A1_Microsoft)&amp;action=edit&amp;redlink=1" class="new" title="Time (команда ОС Microsoft) (страница отсутствует)">Time</a>&#160;• <a href="/w/index.php?title=Tree&amp;action=edit&amp;redlink=1" class="new" title="Tree (страница отсутствует)">Tree</a>&#160;• <a href="/w/index.php?title=Type&amp;action=edit&amp;redlink=1" class="new" title="Type (страница отсутствует)">Type</a>&#160;• <a href="/w/index.php?title=Ver&amp;action=edit&amp;redlink=1" class="new" title="Ver (страница отсутствует)">Ver</a>&#160;• <a href="/w/index.php?title=Verify&amp;action=edit&amp;redlink=1" class="new" title="Verify (страница отсутствует)">Verify</a>&#160;• <a href="/w/index.php?title=Vol&amp;action=edit&amp;redlink=1" class="new" title="Vol (страница отсутствует)">Vol</a>&#160;• <a href="/w/index.php?title=Xcopy&amp;action=edit&amp;redlink=1" class="new" title="Xcopy (страница отсутствует)">Xcopy</a></td>
+</tr>
+<tr>
+<th style="white-space:nowrap;">См. также</th>
+<td style="width:100%;background:#f0f0f0">
+<div style="margin-top:-1ex;margin-bottom:-1ex;padding:0">
+<p><span style="white-space: nowrap;"><a href="/wiki/%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA_%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4_DOS" title="Список команд DOS">Список команд DOS</a> •</span> <span style="white-space: nowrap;"><a href="/w/index.php?title=%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA_%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4_%D0%BE%D0%BF%D0%B5%D1%80%D0%B0%D1%86%D0%B8%D0%BE%D0%BD%D0%BD%D1%8B%D1%85_%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC_Microsoft&amp;action=edit&amp;redlink=1" class="new" title="Список команд операционных систем Microsoft (страница отсутствует)">Список команд операционных систем Microsoft</a></span></p>
+</div>
+</td>
+</tr>
+</table>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1252
+CPU time usage: 0.139 seconds
+Real time usage: 0.195 seconds
+Preprocessor visited node count: 2017/1000000
+Preprocessor generated node count: 0/1500000
+Post‐expand include size: 75352/2097152 bytes
+Template argument size: 49775/2097152 bytes
+Highest expansion depth: 12/40
+Expensive parser function count: 0/500
+-->
+
+<!-- 
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  110.206      1 - -total
+ 92.39%  101.817      4 - Шаблон:Навигационная_таблица
+ 54.47%   60.033      1 - Шаблон:Команды_Unix
+ 33.12%   36.496     92 - Шаблон:Навигационная_таблица/строка
+ 24.26%   26.736      1 - Шаблон:POSIX.1-2008
+ 22.60%   24.911      1 - Шаблон:Man
+ 20.46%   22.551      1 - Шаблон:Man/format
+ 18.23%   20.089      3 - Шаблон:Man/GNU
+ 17.77%   19.589      1 - Шаблон:Команды_Windows
+ 13.88%   15.294      1 - Шаблон:GNU_Coreutils
+-->
+
+<!-- Saved in parser cache with key ruwiki:pcache:idhash:663118-0!*!0!!ru!4!* and timestamp 20150522090244 and revision id 69360765
+ -->
+<noscript><img src="//ru.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>									<div class="printfooter">
+						Источник — «<a dir="ltr" href="https://ru.wikipedia.org/w/index.php?title=Find&amp;oldid=69360765">https://ru.wikipedia.org/w/index.php?title=Find&amp;oldid=69360765</a>»					</div>
+													<div id='catlinks' class='catlinks'><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:%D0%9A%D0%B0%D1%82%D0%B5%D0%B3%D0%BE%D1%80%D0%B8%D0%B8" title="Служебная:Категории">Категории</a>: <ul><li><a href="/wiki/%D0%9A%D0%B0%D1%82%D0%B5%D0%B3%D0%BE%D1%80%D0%B8%D1%8F:%D0%9A%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D0%BD%D0%B0%D1%8F_%D1%81%D1%82%D1%80%D0%BE%D0%BA%D0%B0_MS-DOS/Windows" title="Категория:Командная строка MS-DOS/Windows">Командная строка MS-DOS/Windows</a></li><li><a href="/wiki/%D0%9A%D0%B0%D1%82%D0%B5%D0%B3%D0%BE%D1%80%D0%B8%D1%8F:%D0%A3%D1%82%D0%B8%D0%BB%D0%B8%D1%82%D1%8B_UNIX" title="Категория:Утилиты UNIX">Утилиты UNIX</a></li></ul></div></div>												<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Навигация</h2>
+
+			<div id="mw-head">
+									<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+						<h3 id="p-personal-label">Персональные инструменты</h3>
+						<ul>
+							<li id="pt-createaccount"><a href="/w/index.php?title=%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:%D0%92%D1%85%D0%BE%D0%B4&amp;returnto=Find&amp;type=signup" title="Мы предлагаем вам создать учётную запись и войти в систему, хотя это и не обязательно.">Создать учётную запись</a></li><li id="pt-login"><a href="/w/index.php?title=%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:%D0%92%D1%85%D0%BE%D0%B4&amp;returnto=Find" title="Здесь можно зарегистрироваться в системе, но это необязательно. [o]" accesskey="o">Войти</a></li>						</ul>
+					</div>
+									<div id="left-navigation">
+										<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+						<h3 id="p-namespaces-label">Пространства имён</h3>
+						<ul>
+															<li  id="ca-nstab-main" class="selected"><span><a href="/wiki/Find"  title="Просмотр основной страницы [c]" accesskey="c">Статья</a></span></li>
+															<li  id="ca-talk"><span><a href="/wiki/%D0%9E%D0%B1%D1%81%D1%83%D0%B6%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5:Find"  title="Обсуждение основной страницы [t]" accesskey="t">Обсуждение</a></span></li>
+													</ul>
+					</div>
+										<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+												<h3 id="p-variants-label"><span>Варианты</span><a href="#"></a></h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+									</div>
+				<div id="right-navigation">
+										<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+						<h3 id="p-views-label">Просмотры</h3>
+						<ul>
+															<li id="ca-view" class="selected"><span><a href="/wiki/Find" >Читать</a></span></li>
+															<li id="ca-ve-edit"><span><a href="/w/index.php?title=Find&amp;veaction=edit"  title="Редактировать данную страницу с помощью визуального редактора [v]" accesskey="v">Править</a></span></li>
+															<li id="ca-edit" class=" collapsible"><span><a href="/w/index.php?title=Find&amp;action=edit"  title="Эту статью можно изменять. Перед сохранением изменений, пожалуйста, нажмите кнопку предварительного просмотра для визуальной проверки результата [e]" accesskey="e">Править вики-текст</a></span></li>
+															<li id="ca-history" class="collapsible"><span><a href="/w/index.php?title=Find&amp;action=history"  title="Журнал изменений страницы [h]" accesskey="h">История</a></span></li>
+													</ul>
+					</div>
+										<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+						<h3 id="p-cactions-label"><span>Ещё</span><a href="#"></a></h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+										<div id="p-search" role="search">
+						<h3>
+							<label for="searchInput">Поиск</label>
+						</h3>
+
+						<form action="/w/index.php" id="searchform">
+														<div id="simpleSearch">
+															<input type="search" name="search" placeholder="Поиск" title="Искать в Википедии [f]" accesskey="f" id="searchInput" /><input type="hidden" value="Служебная:Поиск" name="title" /><input type="submit" name="fulltext" value="Найти" title="Найти страницы, содержащие указанный текст" id="mw-searchButton" class="searchButton mw-fallbackSearchButton" /><input type="submit" name="go" value="Перейти" title="Перейти к странице, имеющей в точности такое название" id="searchButton" class="searchButton" />								</div>
+						</form>
+					</div>
+									</div>
+			</div>
+			<div id="mw-panel">
+				<div id="p-logo" role="banner"><a class="mw-wiki-logo" href="/wiki/%D0%97%D0%B0%D0%B3%D0%BB%D0%B0%D0%B2%D0%BD%D0%B0%D1%8F_%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86%D0%B0"  title="Перейти на заглавную страницу"></a></div>
+						<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+			<h3 id='p-navigation-label'>Навигация</h3>
+
+			<div class="body">
+									<ul>
+													<li id="n-mainpage"><a href="/wiki/%D0%97%D0%B0%D0%B3%D0%BB%D0%B0%D0%B2%D0%BD%D0%B0%D1%8F_%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86%D0%B0" title="Перейти на заглавную страницу [z]" accesskey="z">Заглавная страница</a></li>
+													<li id="n-browse"><a href="/wiki/%D0%92%D0%B8%D0%BA%D0%B8%D0%BF%D0%B5%D0%B4%D0%B8%D1%8F:%D0%9F%D0%BE%D0%B8%D1%81%D0%BA_%D0%BF%D0%BE_%D0%BA%D0%B0%D1%82%D0%B5%D0%B3%D0%BE%D1%80%D0%B8%D1%8F%D0%BC" title="Поиск по категориям">Рубрикация</a></li>
+													<li id="n-index"><a href="/wiki/%D0%92%D0%B8%D0%BA%D0%B8%D0%BF%D0%B5%D0%B4%D0%B8%D1%8F:%D0%90%D0%BB%D1%84%D0%B0%D0%B2%D0%B8%D1%82%D0%BD%D1%8B%D0%B9_%D1%83%D0%BA%D0%B0%D0%B7%D0%B0%D1%82%D0%B5%D0%BB%D1%8C" title="Поиск по двум первым буквам">Указатель А — Я</a></li>
+													<li id="n-featured"><a href="/wiki/%D0%92%D0%B8%D0%BA%D0%B8%D0%BF%D0%B5%D0%B4%D0%B8%D1%8F:%D0%98%D0%B7%D0%B1%D1%80%D0%B0%D0%BD%D0%BD%D1%8B%D0%B5_%D1%81%D1%82%D0%B0%D1%82%D1%8C%D0%B8" title="Статьи, считающиеся лучшими статьями проекта">Избранные статьи</a></li>
+													<li id="n-randompage"><a href="/wiki/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:%D0%A1%D0%BB%D1%83%D1%87%D0%B0%D0%B9%D0%BD%D0%B0%D1%8F_%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86%D0%B0" title="Посмотреть случайно выбранную страницу [x]" accesskey="x">Случайная статья</a></li>
+													<li id="n-currentevents"><a href="/wiki/%D0%9F%D0%BE%D1%80%D1%82%D0%B0%D0%BB:%D0%A2%D0%B5%D0%BA%D1%83%D1%89%D0%B8%D0%B5_%D1%81%D0%BE%D0%B1%D1%8B%D1%82%D0%B8%D1%8F" title="Статьи о текущих событиях в мире">Текущие события</a></li>
+											</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-participation' aria-labelledby='p-participation-label'>
+			<h3 id='p-participation-label'>Участие</h3>
+
+			<div class="body">
+									<ul>
+													<li id="n-bug_in_article"><a href="/wiki/%D0%92%D0%B8%D0%BA%D0%B8%D0%BF%D0%B5%D0%B4%D0%B8%D1%8F:%D0%A1%D0%BE%D0%BE%D0%B1%D1%89%D0%B5%D0%BD%D0%B8%D1%8F_%D0%BE%D0%B1_%D0%BE%D1%88%D0%B8%D0%B1%D0%BA%D0%B0%D1%85" title="Сообщить об ошибке в этой статье">Сообщить об ошибке</a></li>
+													<li id="n-portal"><a href="/wiki/%D0%92%D0%B8%D0%BA%D0%B8%D0%BF%D0%B5%D0%B4%D0%B8%D1%8F:%D0%9F%D0%BE%D1%80%D1%82%D0%B0%D0%BB_%D1%81%D0%BE%D0%BE%D0%B1%D1%89%D0%B5%D1%81%D1%82%D0%B2%D0%B0" title="О проекте, о том, чем здесь можно заниматься, а также — где что находится">Портал сообщества</a></li>
+													<li id="n-forum"><a href="/wiki/%D0%92%D0%B8%D0%BA%D0%B8%D0%BF%D0%B5%D0%B4%D0%B8%D1%8F:%D0%A4%D0%BE%D1%80%D1%83%D0%BC" title="Форум участников Википедии">Форум</a></li>
+													<li id="n-recentchanges"><a href="/wiki/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:%D0%A1%D0%B2%D0%B5%D0%B6%D0%B8%D0%B5_%D0%BF%D1%80%D0%B0%D0%B2%D0%BA%D0%B8" title="Список последних изменений [r]" accesskey="r">Свежие правки</a></li>
+													<li id="n-newpages"><a href="/wiki/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:%D0%9D%D0%BE%D0%B2%D1%8B%D0%B5_%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86%D1%8B" title="Список недавно созданных страниц">Новые страницы</a></li>
+													<li id="n-help"><a href="/wiki/%D0%92%D0%B8%D0%BA%D0%B8%D0%BF%D0%B5%D0%B4%D0%B8%D1%8F:%D0%A1%D0%BF%D1%80%D0%B0%D0%B2%D0%BA%D0%B0" title="Место, где можно получить справку">Справка</a></li>
+													<li id="n-sitesupport"><a href="//donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_ru.wikipedia.org&amp;uselang=ru" title="Поддержите нас">Пожертвования</a></li>
+											</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+			<h3 id='p-tb-label'>Инструменты</h3>
+
+			<div class="body">
+									<ul>
+													<li id="t-whatlinkshere"><a href="/wiki/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:%D0%A1%D1%81%D1%8B%D0%BB%D0%BA%D0%B8_%D1%81%D1%8E%D0%B4%D0%B0/Find" title="Список всех страниц, ссылающихся на данную [j]" accesskey="j">Ссылки сюда</a></li>
+													<li id="t-recentchangeslinked"><a href="/wiki/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:%D0%A1%D0%B2%D1%8F%D0%B7%D0%B0%D0%BD%D0%BD%D1%8B%D0%B5_%D0%BF%D1%80%D0%B0%D0%B2%D0%BA%D0%B8/Find" title="Последние изменения в страницах, на которые ссылается эта страница [k]" accesskey="k">Связанные правки</a></li>
+													<li id="t-specialpages"><a href="/wiki/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:%D0%A1%D0%BF%D0%B5%D1%86%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86%D1%8B" title="Список служебных страниц [q]" accesskey="q">Спецстраницы</a></li>
+													<li id="t-permalink"><a href="/w/index.php?title=Find&amp;oldid=69360765" title="Постоянная ссылка на эту версию страницы">Постоянная ссылка</a></li>
+													<li id="t-info"><a href="/w/index.php?title=Find&amp;action=info" title="Подробнее об этой странице">Сведения о странице</a></li>
+													<li id="t-wikibase"><a href="//www.wikidata.org/wiki/Q114633" title="Ссылка на связанный элемент репозитория данных [g]" accesskey="g">Элемент Викиданных</a></li>
+						<li id="t-cite"><a href="/w/index.php?title=%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:%D0%A6%D0%B8%D1%82%D0%B0%D1%82%D0%B0&amp;page=Find&amp;id=69360765" title="Информация о том, как цитировать эту страницу">Цитировать страницу</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+			<h3 id='p-coll-print_export-label'>Печать/экспорт</h3>
+
+			<div class="body">
+									<ul>
+													<li id="coll-create_a_book"><a href="/w/index.php?title=%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:%D0%9A%D0%BE%D0%BB%D0%BB%D0%B5%D0%BA%D1%86%D0%B8%D1%8F_%D0%BA%D0%BD%D0%B8%D0%B3&amp;bookcmd=book_creator&amp;referer=Find">Создать книгу</a></li>
+													<li id="coll-download-as-rdf2latex"><a href="/w/index.php?title=%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:%D0%9A%D0%BE%D0%BB%D0%BB%D0%B5%D0%BA%D1%86%D0%B8%D1%8F_%D0%BA%D0%BD%D0%B8%D0%B3&amp;bookcmd=render_article&amp;arttitle=Find&amp;oldid=69360765&amp;writer=rdf2latex">Скачать как PDF</a></li>
+													<li id="t-print"><a href="/w/index.php?title=Find&amp;printable=yes" title="Версия этой страницы для печати [p]" accesskey="p">Версия для печати</a></li>
+											</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-lang' aria-labelledby='p-lang-label'>
+			<h3 id='p-lang-label'>На других языках</h3>
+
+			<div class="body">
+									<ul>
+													<li class="interlanguage-link interwiki-ca"><a href="//ca.wikipedia.org/wiki/Find" title="Find — каталанский" lang="ca" hreflang="ca">Català</a></li>
+													<li class="interlanguage-link interwiki-cs"><a href="//cs.wikipedia.org/wiki/Find" title="Find — чешский" lang="cs" hreflang="cs">Čeština</a></li>
+													<li class="interlanguage-link interwiki-de"><a href="//de.wikipedia.org/wiki/Find" title="Find — немецкий" lang="de" hreflang="de">Deutsch</a></li>
+													<li class="interlanguage-link interwiki-el"><a href="//el.wikipedia.org/wiki/Find" title="Find — греческий" lang="el" hreflang="el">Ελληνικά</a></li>
+													<li class="interlanguage-link interwiki-en"><a href="//en.wikipedia.org/wiki/Find" title="Find — английский" lang="en" hreflang="en">English</a></li>
+													<li class="interlanguage-link interwiki-es"><a href="//es.wikipedia.org/wiki/Find" title="Find — испанский" lang="es" hreflang="es">Español</a></li>
+													<li class="interlanguage-link interwiki-fa"><a href="//fa.wikipedia.org/wiki/Find" title="Find — персидский" lang="fa" hreflang="fa">فارسی</a></li>
+													<li class="interlanguage-link interwiki-fi"><a href="//fi.wikipedia.org/wiki/Find_(Unix)" title="Find (Unix) — финский" lang="fi" hreflang="fi">Suomi</a></li>
+													<li class="interlanguage-link interwiki-fr"><a href="//fr.wikipedia.org/wiki/Find" title="Find — французский" lang="fr" hreflang="fr">Français</a></li>
+													<li class="interlanguage-link interwiki-he"><a href="//he.wikipedia.org/wiki/Find" title="Find — иврит" lang="he" hreflang="he">עברית</a></li>
+													<li class="interlanguage-link interwiki-hr"><a href="//hr.wikipedia.org/wiki/Find" title="Find — хорватский" lang="hr" hreflang="hr">Hrvatski</a></li>
+													<li class="interlanguage-link interwiki-hu"><a href="//hu.wikipedia.org/wiki/Find" title="Find — венгерский" lang="hu" hreflang="hu">Magyar</a></li>
+													<li class="interlanguage-link interwiki-it"><a href="//it.wikipedia.org/wiki/Find_(Unix)" title="Find (Unix) — итальянский" lang="it" hreflang="it">Italiano</a></li>
+													<li class="interlanguage-link interwiki-ja"><a href="//ja.wikipedia.org/wiki/Find" title="Find — японский" lang="ja" hreflang="ja">日本語</a></li>
+													<li class="interlanguage-link interwiki-pl"><a href="//pl.wikipedia.org/wiki/Find" title="Find — польский" lang="pl" hreflang="pl">Polski</a></li>
+													<li class="interlanguage-link interwiki-pt"><a href="//pt.wikipedia.org/wiki/Find" title="Find — португальский" lang="pt" hreflang="pt">Português</a></li>
+													<li class="interlanguage-link interwiki-ro"><a href="//ro.wikipedia.org/wiki/Find" title="Find — румынский" lang="ro" hreflang="ro">Română</a></li>
+													<li class="interlanguage-link interwiki-uk"><a href="//uk.wikipedia.org/wiki/Find" title="Find — украинский" lang="uk" hreflang="uk">Українська</a></li>
+													<li class="uls-p-lang-dummy"><a href="#"></a></li>
+											</ul>
+				<div class='after-portlet after-portlet-lang'><span class="wb-langlinks-edit wb-langlinks-link"><a href="//www.wikidata.org/wiki/Q114633#sitelinks-wikipedia" title="Править межъязыковые ссылки" class="wbc-editpage">Править ссылки</a></span></div>			</div>
+		</div>
+				</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> Последнее изменение этой страницы: 08:54, 20 марта 2015.</li>
+											<li id="footer-info-copyright">Текст доступен по <a rel="license" href="//ru.wikipedia.org/wiki/Википедия:Текст_лицензии_Creative_Commons_Attribution-ShareAlike_3.0_Unported">лицензии Creative Commons Attribution-ShareAlike</a><a rel="license" href="//creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>; в отдельных случаях могут действовать дополнительные условия.
+<span class="noprint">Подробнее см. <a href="//wikimediafoundation.org/wiki/Terms_of_Use/ru">Условия использования</a>.</span><br/>
+Wikipedia&reg; — зарегистрированный товарный знак некоммерческой организации <a href="//wikimediafoundation.org/wiki/Приёмная">Wikimedia Foundation, Inc.</a><br /></li><li class="noprint"><a class='internal' href="//ru.wikipedia.org/wiki/Википедия:Контакты">Свяжитесь с нами</a></li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="//wikimediafoundation.org/wiki/%D0%9F%D0%BE%D0%BB%D0%B8%D1%82%D0%B8%D0%BA%D0%B0_%D0%BA%D0%BE%D0%BD%D1%84%D0%B8%D0%B4%D0%B5%D0%BD%D1%86%D0%B8%D0%B0%D0%BB%D1%8C%D0%BD%D0%BE%D1%81%D1%82%D0%B8" title="wikimedia:Политика конфиденциальности">Политика конфиденциальности</a></li>
+											<li id="footer-places-about"><a href="/wiki/%D0%92%D0%B8%D0%BA%D0%B8%D0%BF%D0%B5%D0%B4%D0%B8%D1%8F:%D0%9E%D0%BF%D0%B8%D1%81%D0%B0%D0%BD%D0%B8%D0%B5" title="Википедия:Описание">Описание Википедии</a></li>
+											<li id="footer-places-disclaimer"><a href="/wiki/%D0%92%D0%B8%D0%BA%D0%B8%D0%BF%D0%B5%D0%B4%D0%B8%D1%8F:%D0%9E%D1%82%D0%BA%D0%B0%D0%B7_%D0%BE%D1%82_%D0%BE%D1%82%D0%B2%D0%B5%D1%82%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D0%BD%D0%BE%D1%81%D1%82%D0%B8" title="Википедия:Отказ от ответственности">Отказ от ответственности</a></li>
+											<li id="footer-places-developers"><a href="https://www.mediawiki.org/wiki/How_to_contribute/ru">Разработчики</a></li>
+											<li id="footer-places-mobileview"><a href="//ru.m.wikipedia.org/w/index.php?title=Find&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Мобильная версия</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+											<li id="footer-copyrightico">
+															<a href="//wikimediafoundation.org/"><img src="/static/images/wikimedia-button.png" srcset="/static/images/wikimedia-button-1.5x.png 1.5x, /static/images/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation"/></a>
+													</li>
+											<li id="footer-poweredbyico">
+															<a href="//www.mediawiki.org/"><img src="//ru.wikipedia.org/static/1.26wmf6/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="//ru.wikipedia.org/static/1.26wmf6/resources/assets/poweredby_mediawiki_132x47.png 1.5x, //ru.wikipedia.org/static/1.26wmf6/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31" /></a>
+													</li>
+									</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>if(window.jQuery)jQuery.ready();</script><script>if(window.mw){
+mw.loader.state({"ext.globalCssJs.site":"ready","ext.globalCssJs.user":"ready","site":"loading","user":"ready","user.groups":"ready"});
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.toc","mediawiki.action.view.postEdit","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest","ext.cirrusSearch.loggingSchema","mmv.bootstrap.autostart","ext.imageMetrics.loader","ext.visualEditor.targetLoader","ext.eventLogging.subscriber","ext.wikimediaEvents.statsd","ext.navigationTiming","schema.UniversalLanguageSelector","ext.uls.eventlogger","ext.uls.interlanguage","ext.gadget.collapserefs","ext.gadget.directLinkToCommons","ext.gadget.referenceTooltips","ext.gadget.logo","ext.flaggedRevs.advanced"],null,true);
+}</script>
+<script src="/w/index.php?title=MediaWiki:Gadget-referenceTooltips.js&amp;action=raw&amp;ctype=text/javascript&amp;68046302"></script>
+<script>if(window.mw){
+document.write("\u003Cscript src=\"//ru.wikipedia.org/w/load.php?debug=false\u0026amp;lang=ru\u0026amp;modules=site\u0026amp;only=scripts\u0026amp;skin=vector\u0026amp;*\"\u003E\u003C/script\u003E");
+}</script>
+<script>if(window.mw){
+mw.config.set({"wgBackendResponseTime":104,"wgHostname":"mw1249"});
+}</script>
+	</body>
+</html>

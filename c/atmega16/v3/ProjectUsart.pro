@@ -4,8 +4,8 @@ CONFIG -= app_bundle
 CONFIG -= qt
 
 SOURCES += \
-    useUsart.cpp \
-    Usart.cpp
+    Usart.cpp \
+    useUsart.cpp
 
 include(deployment.pri)
 qtcAddDeployment()
