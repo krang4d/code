@@ -15,6 +15,8 @@ class usart
         void print_port() const;
         void put_str(char*, int len);
         void set_atmega16();
+        usart();
+        ~usart();
 }
 
 #endif
