@@ -37,6 +37,8 @@ static char *cmd_list[] =
     "K15", "K16", "K17", "K18", "K19", "K20", "K21", "STATUS"
     };
 
+
+
 static byte USART_Receive()
 {
 	while ( !(UCSRA & (1<<RXC)) )                   /* Waite for data to be received */
@@ -140,6 +142,7 @@ usart::put_str(char *s, int len)
 	}
 	USART_Transmit('\0');
 }
+
 
 void usart::print_port() const
 {
