@@ -137,6 +137,10 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 		// Parse the menu selections:
 		switch (wmId)
 		{
+
+		case IDM_LINE:
+			DialogBox(hInst, MAKEINTRESOURCE(IDD_LINE), hWnd, About);
+			break;
 		case IDM_ABOUT:
 			DialogBox(hInst, MAKEINTRESOURCE(IDD_ABOUTBOX), hWnd, About);
 			break;
@@ -151,10 +155,39 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 		hdc = BeginPaint(hWnd, &ps);
 		{
 			// TODO: Add any drawing code here...
-			Ellipse(hdc, 100, 100, 400, 400);
-			Line ab(Point(100, 100), Point(200, 200));
-			ab.Draw(hdc);
 
+			//перо
+			HPEN hNewPen = CreatePen(PS_SOLID, 3, RGB(255, 0, 0));
+			HPEN hOldPen = (HPEN)SelectObject(hdc, hNewPen);
+
+			HBRUSH hOldBrush = (HBRUSH)SelectObject(hdc, GetStockObject(GRAY_BRUSH));
+		
+
+			Circle c(Point(250, 250), 150);
+			c.Draw(hdc);
+
+			HBRUSH hNewBrush = CreateSolidBrush(RGB(255, 255, 0));
+			SelectObject(hdc, hNewBrush);
+			Circle c2(Point(400, 200), 50);
+			c2.Draw(hdc);
+
+			HBRUSH hNewBrush2 = CreateHatchBrush(HS_DIAGCROSS, RGB(0, 255, 0));
+			SelectObject(hdc, hNewBrush2);
+			Circle c3(Point(500, 150), 100);
+			c3.Draw(hdc);
+
+			Line ab(Point(100, 100), Point(200, 200));
+			Line cd(Point(110, 100), Point(210, 200));
+
+			ab.Draw(hdc);
+			cd.Draw(hdc);
+
+
+			SelectObject(hdc, hOldBrush);
+			SelectObject(hdc, hOldPen);
+			DeleteObject(hNewBrush);
+			DeleteObject(hNewBrush2);
+			DeleteObject(hNewPen);
 		}
 		EndPaint(hWnd, &ps);
 		break;
