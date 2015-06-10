@@ -80,6 +80,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Circle.h" />
+    <ClInclude Include="DynArray.h" />
     <ClInclude Include="Line.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="Shape.h" />
