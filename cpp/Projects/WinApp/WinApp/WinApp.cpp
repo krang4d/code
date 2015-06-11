@@ -17,7 +17,8 @@ BOOL				InitInstance(HINSTANCE, int);
 LRESULT CALLBACK	WndProc(HWND, UINT, WPARAM, LPARAM);
 INT_PTR CALLBACK	About(HWND, UINT, WPARAM, LPARAM);
 INT_PTR CALLBACK	LineProc(HWND, UINT, WPARAM, LPARAM);
-
+INT_PTR CALLBACK	CircleProc(HWND, UINT, WPARAM, LPARAM);
+INT_PTR CALLBACK	SquerProc(HWND, UINT, WPARAM, LPARAM);
 
 int APIENTRY _tWinMain(_In_ HINSTANCE hInstance,
                      _In_opt_ HINSTANCE hPrevInstance,
@@ -56,9 +57,6 @@ int APIENTRY _tWinMain(_In_ HINSTANCE hInstance,
 
 	return (int) msg.wParam;
 }
-
-
-
 //
 //  FUNCTION: MyRegisterClass()
 //
@@ -84,7 +82,6 @@ ATOM MyRegisterClass(HINSTANCE hInstance)
 
 	return RegisterClassEx(&wcex);
 }
-
 //
 //   FUNCTION: InitInstance(HINSTANCE, int)
 //
@@ -114,7 +111,6 @@ BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
 
    return TRUE;
 }
-
 //
 //  FUNCTION: WndProc(HWND, UINT, WPARAM, LPARAM)
 //
@@ -139,9 +135,14 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 		// Parse the menu selections:
 		switch (wmId)
 		{
-
 		case IDM_LINE:
 			DialogBox(hInst, MAKEINTRESOURCE(IDD_LINE), hWnd, LineProc);
+			break;
+		case IDM_CIRCLE:
+			DialogBox(hInst, MAKEINTRESOURCE(IDD_CIRCLE), hWnd, CircleProc);
+			break;
+		case IDM_SQUER:
+			DialogBox(hInst, MAKEINTRESOURCE(IDD_SQUER), hWnd, SquerProc);
 			break;
 		case IDM_ABOUT:
 			DialogBox(hInst, MAKEINTRESOURCE(IDD_ABOUTBOX), hWnd, About);
@@ -242,11 +243,73 @@ INT_PTR CALLBACK LineProc(HWND hDlg, UINT message, WPARAM wParam, LPARAM lParam)
 			{
 					 int x1 = GetDlgItemInt(hDlg, IDC_X1, 0, 0);
 					 int y1 = GetDlgItemInt(hDlg, IDC_Y1, 0, 0);
-					 //GetDlgItemText()
+					 //GetDlgItemText();
 					 int x2 = GetDlgItemInt(hDlg, IDC_X2, 0, 0);
 					 int y2 = GetDlgItemInt(hDlg, IDC_Y2, 0, 0);
 					 Line a(Point(x1, y1), Point(x2, y2));
 			}
+		case IDCANCEL:
+			EndDialog(hDlg, wmId);
+			return (INT_PTR)TRUE;
+		}
+		break;
+	}
+	return (INT_PTR)FALSE;
+}
+
+INT_PTR CALLBACK CircleProc(HWND hDlg, UINT message, WPARAM wParam, LPARAM lParam)
+{
+	int wmId, wmEvent;
+
+	UNREFERENCED_PARAMETER(lParam);
+	switch (message)
+	{
+	case WM_INITDIALOG:
+		return (INT_PTR)TRUE;
+
+	case WM_COMMAND:
+		wmId = LOWORD(wParam);
+		wmEvent = HIWORD(wParam);
+		// Parse the menu selections:
+		switch (wmId)
+		{
+		case IDOK:
+		{
+					 int x = GetDlgItemInt(hDlg, IDC_X, 0, 0);
+					 int y = GetDlgItemInt(hDlg, IDC_Y, 0, 0);
+					 int r = GetDlgItemInt(hDlg, IDC_RADIUS, 0, 0);
+					 Circle c(Point(x,y), r);
+		}
+		case IDCANCEL:
+			EndDialog(hDlg, wmId);
+			return (INT_PTR)TRUE;
+		}
+		break;
+	}
+	return (INT_PTR)FALSE;
+}
+
+INT_PTR CALLBACK SquerProc(HWND hDlg, UINT message, WPARAM wParam, LPARAM lParam)
+{
+	int wmId, wmEvent;
+
+	UNREFERENCED_PARAMETER(lParam);
+	switch (message)
+	{
+	case WM_INITDIALOG:
+		return (INT_PTR)TRUE;
+
+	case WM_COMMAND:
+		wmId = LOWORD(wParam);
+		wmEvent = HIWORD(wParam);
+		// Parse the menu selections:
+		switch (wmId)
+		{
+		case IDOK:
+		{
+					 int x = GetDlgItemInt(hDlg, IDC_X, 0, 0);
+					 int y = GetDlgItemInt(hDlg, IDC_Y, 0, 0);
+		}
 		case IDCANCEL:
 			EndDialog(hDlg, wmId);
 			return (INT_PTR)TRUE;

@@ -1,11 +1,8 @@
 #include "stdafx.h"
 #include "Line.h"
 
-
-Line::Line(const Point &_a, const Point &_b)
-:a(_a), b(_b)
+Line::Line(const Point &_a, const Point &_b) :a(_a), b(_b)
 {}
-
 
 Line::~Line()
 {}

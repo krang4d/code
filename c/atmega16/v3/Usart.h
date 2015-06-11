@@ -7,13 +7,13 @@ typedef unsigned char byte;
 class usart
 {
 	private:
-		unsigned char nA, nB, nC, nD;
+		byte nA, nB, nC, nD;
 	public:
 		void init(ui&);
 		int get_port(byte&) const;
 		int set_port(byte&, int&);
         void print_port() const;
-        void put_str(char*, int len);
+        void put_str(char*, int);
         void set_atmega16();
         usart();
         ~usart();

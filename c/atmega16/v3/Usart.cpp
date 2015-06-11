@@ -67,7 +67,7 @@ static byte* get_str()
     return p;
 }
 
-void usart::init(ui&)
+void usart::init(ui& ubrr)
 {
 	//  Port A Initialization
 	DDRA = 0xFF;
