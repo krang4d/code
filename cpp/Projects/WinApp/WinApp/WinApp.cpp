@@ -10,6 +10,7 @@
 HINSTANCE hInst;								// current instance
 TCHAR szTitle[MAX_LOADSTRING];					// The title bar text
 TCHAR szWindowClass[MAX_LOADSTRING];			// the main window class name
+TCHAR szCurrentTime[40];						// массив для формирования строки - текущие дата и время
 
 // Forward declarations of functions included in this code module:
 ATOM				MyRegisterClass(HINSTANCE hInstance);
@@ -19,6 +20,12 @@ INT_PTR CALLBACK	About(HWND, UINT, WPARAM, LPARAM);
 INT_PTR CALLBACK	LineProc(HWND, UINT, WPARAM, LPARAM);
 INT_PTR CALLBACK	CircleProc(HWND, UINT, WPARAM, LPARAM);
 INT_PTR CALLBACK	SquerProc(HWND, UINT, WPARAM, LPARAM);
+/*
+Прототип функции получения текущего 
+времени и преобразование его в символы
+*/
+void				OutTimeDate(HWND);
+
 
 int APIENTRY _tWinMain(_In_ HINSTANCE hInstance,
                      _In_opt_ HINSTANCE hPrevInstance,
@@ -106,6 +113,10 @@ BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
       return FALSE;
    }
 
+   //wsprintf((LPWSTR)szAsm, _T("CS=%X,DS=%X\nES=%X,SS=%X\nWinMain = %X\nszWindowClass = %X"), regCS, regDS, regES, regSS);
+   //MessageBox(NULL, (LPTSTR)szAsm, _T("Регистры"), MB_ICONINFORMATION);
+   // Ввод исходных данных
+
    ShowWindow(hWnd, nCmdShow);
    UpdateWindow(hWnd);
 
@@ -126,9 +137,33 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 	int wmId, wmEvent;
 	PAINTSTRUCT ps;
 	HDC hdc;
+	TCHAR szTimerID[20];
 
 	switch (message)
 	{
+	case WM_CREATE:
+		OutTimeDate(hWnd);							//Первый вывод текущего времени
+		SetTimer(hWnd, 1, 5000, (TIMERPROC)NULL);	//функция создает системный таймер c периодом 1с
+		SetTimer(hWnd, 2, 2000, (TIMERPROC)NULL);
+		return TRUE;
+	case WM_TIMER:
+		switch (wParam)
+		{
+		case 1:
+			MessageBox(NULL, _T("Первый таймер"), _T("wParam"), MB_ICONINFORMATION);
+			break;
+		case 2:
+			MessageBox(NULL, _T("Второй таймер"), _T("wParam"), MB_ICONINFORMATION);
+			break;
+		default:
+			wsprintf((LPWSTR)szTimerID, _T("%X"), wParam);
+			MessageBox(NULL, (LPTSTR)szTimerID, _T("wParam"), MB_ICONINFORMATION);
+			break;
+		}
+		OutTimeDate(hWnd);
+		wsprintf((LPWSTR)szTimerID, _T("%X"), wParam);
+		MessageBox(NULL, (LPTSTR)szTimerID, _T("wParam"), MB_ICONINFORMATION);
+		break;
 	case WM_COMMAND:
 		wmId    = LOWORD(wParam);
 		wmEvent = HIWORD(wParam);
@@ -158,8 +193,9 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 		hdc = BeginPaint(hWnd, &ps);
 		{
 			// TODO: Add any drawing code here...
-
+			//использование функций GDI
 			//перо
+
 			HPEN hNewPen = CreatePen(PS_SOLID, 3, RGB(255, 0, 0));
 			HPEN hOldPen = (HPEN)SelectObject(hdc, hNewPen);
 
@@ -185,7 +221,13 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 			ab.Draw(hdc);
 			cd.Draw(hdc);
 
-
+			RECT rect = {0, 0, 200, 50};
+			//LPRECT lpRect = &rect;
+			//GetClientRect(hWnd, lpRect);
+			SetTextColor(hdc, RGB(0, 250, 0));
+			//SetBkColor(hdc, RGB(250, 0, 0));
+			DrawText(hdc, szCurrentTime, -1, &rect, (DT_SINGLELINE | DT_CENTER | DT_VCENTER));
+			
 			SelectObject(hdc, hOldBrush);
 			SelectObject(hdc, hOldPen);
 			DeleteObject(hNewBrush);
@@ -248,6 +290,7 @@ INT_PTR CALLBACK LineProc(HWND hDlg, UINT message, WPARAM wParam, LPARAM lParam)
 					 int y2 = GetDlgItemInt(hDlg, IDC_Y2, 0, 0);
 					 Line a(Point(x1, y1), Point(x2, y2));
 			}
+
 		case IDCANCEL:
 			EndDialog(hDlg, wmId);
 			return (INT_PTR)TRUE;
@@ -292,7 +335,9 @@ INT_PTR CALLBACK CircleProc(HWND hDlg, UINT message, WPARAM wParam, LPARAM lPara
 INT_PTR CALLBACK SquerProc(HWND hDlg, UINT message, WPARAM wParam, LPARAM lParam)
 {
 	int wmId, wmEvent;
+	TCHAR szText[80];
 
+	wsprintf(szText, _T("HELLO WORLD!"));
 	UNREFERENCED_PARAMETER(lParam);
 	switch (message)
 	{
@@ -317,4 +362,66 @@ INT_PTR CALLBACK SquerProc(HWND hDlg, UINT message, WPARAM wParam, LPARAM lParam
 		break;
 	}
 	return (INT_PTR)FALSE;
+}
+
+void OutTimeDate(HWND hWnd)
+{
+	LPTSTR szDay[] = { _T("Вск."), _T("Пнд."), _T("Втр."),
+		_T("Ср."), _T("Чтв."),
+		_T("Птн."), _T("Суб.")
+	};
+	LPTSTR szMonth[] = { _T(""), _T("Янв."), _T("Февр."),
+		_T("Март"), _T("Апр."),
+		_T("Май"), _T("Июнь"),
+		_T("Июль"), _T("Авг."),
+		_T("Сент."), _T("Окт."),
+		_T("Нояб."), _T("Дек.")
+	};
+	TCHAR szT[20];
+	SYSTEMTIME SystemTime;
+	/*
+	Функция GetLocalTime осуществляет выборку местного време-
+	ни, на которое настроен компьютер, т.е. функция
+	заполняет структуру типа SYSTEMTIME в числовом виде.
+	*/
+	GetLocalTime(&SystemTime);
+	/*День недели*/
+	lstrcpy(szCurrentTime,
+		szDay[SystemTime.wDayOfWeek]);
+	/*Разделяющий пробел*/
+	lstrcat((LPTSTR)szCurrentTime, _T(" "));
+	/*Месяц*/
+	lstrcat((LPTSTR)szCurrentTime,
+		szMonth[SystemTime.wMonth]);
+	/*Разделяющий пробел*/
+	lstrcat((LPTSTR)szCurrentTime, _T(" "));
+	/*Дату переводим в символы*/
+	wsprintf((LPTSTR)szT, _T("%d"),
+		SystemTime.wDay);
+	lstrcat((LPTSTR)szCurrentTime, (LPTSTR)szT);
+	/*Разделяющий пробел*/
+	lstrcat((LPTSTR)szCurrentTime, _T(" "));
+	/*Год переводим в символы*/
+	wsprintf((LPTSTR)szT, _T("%d"),
+		SystemTime.wYear);
+	lstrcat((LPTSTR)szCurrentTime, (LPTSTR)szT);
+	lstrcat((LPTSTR)szCurrentTime, _T("---"));
+	/**Часы переводим в символы*/
+	wsprintf((LPTSTR)szT, _T("%d"),
+		SystemTime.wHour);
+	lstrcat((LPTSTR)szCurrentTime, (LPTSTR)szT);
+	/*Разделяющее двоеточие*/
+	lstrcat((LPTSTR)szCurrentTime, _T(":"));
+	/*Минуты переводим в символы*/
+	wsprintf((LPTSTR)szT, _T("%d"),
+		SystemTime.wMinute);
+	lstrcat((LPTSTR)szCurrentTime, (LPTSTR)szT);
+	/*Разделяющее двоеточие*/
+	lstrcat((LPTSTR)szCurrentTime, _T(":"));
+	/*Сеуцнды переводим в символы*/
+	wsprintf((LPTSTR)szT, _T("%d"),
+		SystemTime.wSecond);
+	lstrcat((LPTSTR)szCurrentTime, (LPTSTR)szT);
+	/*Перерисовка окна*/
+	InvalidateRect(hWnd, NULL, TRUE);
 }
