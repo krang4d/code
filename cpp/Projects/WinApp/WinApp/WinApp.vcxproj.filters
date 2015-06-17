@@ -24,9 +24,6 @@
     <ClInclude Include="targetver.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Resource.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="WinApp.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -40,6 +37,15 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="DynArray.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Header.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Squer.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -56,6 +62,9 @@
     <ClCompile Include="Circle.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Squer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="WinApp.rc">
@@ -69,5 +78,8 @@
     <Image Include="WinApp.ico">
       <Filter>Resource Files</Filter>
     </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
   </ItemGroup>
 </Project>

@@ -5,6 +5,8 @@
 #include "WinApp.h"
 
 #define MAX_LOADSTRING 100
+#define TIMER_01 101
+#define TIMER_02 202
 
 // Global Variables:
 HINSTANCE hInst;								// current instance
@@ -20,6 +22,7 @@ INT_PTR CALLBACK	About(HWND, UINT, WPARAM, LPARAM);
 INT_PTR CALLBACK	LineProc(HWND, UINT, WPARAM, LPARAM);
 INT_PTR CALLBACK	CircleProc(HWND, UINT, WPARAM, LPARAM);
 INT_PTR CALLBACK	SquerProc(HWND, UINT, WPARAM, LPARAM);
+INT_PTR CALLBACK	LoginProc(HWND, UINT, WPARAM, LPARAM);
 /*
 Прототип функции получения текущего 
 времени и преобразование его в символы
@@ -113,9 +116,11 @@ BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
       return FALSE;
    }
 
-   //wsprintf((LPWSTR)szAsm, _T("CS=%X,DS=%X\nES=%X,SS=%X\nWinMain = %X\nszWindowClass = %X"), regCS, regDS, regES, regSS);
-   //MessageBox(NULL, (LPTSTR)szAsm, _T("Регистры"), MB_ICONINFORMATION);
-   // Ввод исходных данных
+	
+	DialogBox(hInst, MAKEINTRESOURCE(IDD_LOGIN), hWnd, LoginProc);
+	//wsprintf((LPWSTR)szAsm, _T("CS=%X,DS=%X\nES=%X,SS=%X\nWinMain = %X\nszWindowClass = %X"), regCS, regDS, regES, regSS);
+	//MessageBox(NULL, _T(""), _T("Регистры"), MB_ICONINFORMATION);
+	// Ввод исходных данных
 
    ShowWindow(hWnd, nCmdShow);
    UpdateWindow(hWnd);
@@ -142,27 +147,29 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 	switch (message)
 	{
 	case WM_CREATE:
-		OutTimeDate(hWnd);							//Первый вывод текущего времени
-		SetTimer(hWnd, 1, 5000, (TIMERPROC)NULL);	//функция создает системный таймер c периодом 1с
-		SetTimer(hWnd, 2, 2000, (TIMERPROC)NULL);
+		OutTimeDate(hWnd);									//Первый вывод текущего времени
+		SetTimer(hWnd, TIMER_01, 1000, (TIMERPROC)NULL);	//функция создает системный таймер c периодом 1с
+		SetTimer(hWnd, TIMER_02, 5000, (TIMERPROC)NULL);
 		return TRUE;
 	case WM_TIMER:
 		switch (wParam)
 		{
-		case 1:
-			MessageBox(NULL, _T("Первый таймер"), _T("wParam"), MB_ICONINFORMATION);
+		case TIMER_01:
+			OutTimeDate(hWnd);
+			//MessageBox(NULL, _T("Первый таймер"), _T("wParam"), MB_ICONINFORMATION);
 			break;
-		case 2:
-			MessageBox(NULL, _T("Второй таймер"), _T("wParam"), MB_ICONINFORMATION);
+		case TIMER_02:
+			//MessageBox(NULL, _T("Второй таймер"), _T("wParam"), MB_ICONINFORMATION);
 			break;
 		default:
-			wsprintf((LPWSTR)szTimerID, _T("%X"), wParam);
+			wsprintf((LPWSTR)szTimerID, _T("Неизвестный сигнал таймера %X"), wParam);
 			MessageBox(NULL, (LPTSTR)szTimerID, _T("wParam"), MB_ICONINFORMATION);
 			break;
 		}
-		OutTimeDate(hWnd);
+		/*
 		wsprintf((LPWSTR)szTimerID, _T("%X"), wParam);
 		MessageBox(NULL, (LPTSTR)szTimerID, _T("wParam"), MB_ICONINFORMATION);
+		*/
 		break;
 	case WM_COMMAND:
 		wmId    = LOWORD(wParam);
@@ -216,10 +223,10 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 			c3.Draw(hdc);
 
 			Line ab(Point(100, 100), Point(200, 200));
-			Line cd(Point(110, 100), Point(210, 200));
-
 			ab.Draw(hdc);
-			cd.Draw(hdc);
+		
+			Squer ac(Point(250, 250), Point(300, 300));
+			ac.Draw(hdc);
 
 			RECT rect = {0, 0, 200, 50};
 			//LPRECT lpRect = &rect;
@@ -352,8 +359,40 @@ INT_PTR CALLBACK SquerProc(HWND hDlg, UINT message, WPARAM wParam, LPARAM lParam
 		{
 		case IDOK:
 		{
-					 int x = GetDlgItemInt(hDlg, IDC_X, 0, 0);
-					 int y = GetDlgItemInt(hDlg, IDC_Y, 0, 0);
+					 int x1 = GetDlgItemInt(hDlg, IDC_X1, 0, 0);
+					 int y1 = GetDlgItemInt(hDlg, IDC_Y1, 0, 0);
+					 int x2 = GetDlgItemInt(hDlg, IDC_X2, 0, 0);
+					 int y2 = GetDlgItemInt(hDlg, IDC_Y2, 0, 0);
+					 Squer ac(Point(x1, y1), Point(x2, y2));
+		}
+		case IDCANCEL:
+			EndDialog(hDlg, wmId);
+			return (INT_PTR)TRUE;
+		}
+		break;
+	}
+	return (INT_PTR)FALSE;
+}
+
+INT_PTR CALLBACK LoginProc(HWND hDlg, UINT message, WPARAM wParam, LPARAM lParam)
+{
+	int wmId, wmEvent;
+
+	UNREFERENCED_PARAMETER(lParam);
+	switch (message)
+	{
+	case WM_INITDIALOG:
+		return (INT_PTR)TRUE;
+
+	case WM_COMMAND:
+		wmId = LOWORD(wParam);
+		wmEvent = HIWORD(wParam);
+		// Parse the menu selections:
+		switch (wmId)
+		{
+		case IDOK:
+		{
+		
 		}
 		case IDCANCEL:
 			EndDialog(hDlg, wmId);
