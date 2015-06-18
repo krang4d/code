@@ -137,6 +137,9 @@ BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
 //  WM_DESTROY	- post a quit message and return
 //
 //
+
+DynArray<Shape *> pic;
+
 LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 {
 	int wmId, wmEvent;
@@ -150,6 +153,11 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 		OutTimeDate(hWnd);									//Первый вывод текущего времени
 		SetTimer(hWnd, TIMER_01, 1000, (TIMERPROC)NULL);	//функция создает системный таймер c периодом 1с
 		SetTimer(hWnd, TIMER_02, 5000, (TIMERPROC)NULL);
+		pic.Add(new Circle(Point(250, 250), 150));
+		pic.Add(new Circle(Point(400, 200), 50));
+		pic.Add(new Circle(Point(500, 150), 100));
+		pic.Add(new Line(Point(100, 100), Point(200, 200)));
+		pic.Add(new Squer(Point(250, 250), Point(300, 300)));
 		return TRUE;
 	case WM_TIMER:
 		switch (wParam)
@@ -179,12 +187,15 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 		{
 		case IDM_LINE:
 			DialogBox(hInst, MAKEINTRESOURCE(IDD_LINE), hWnd, LineProc);
+			InvalidateRect(hWnd, 0, 1);
 			break;
 		case IDM_CIRCLE:
 			DialogBox(hInst, MAKEINTRESOURCE(IDD_CIRCLE), hWnd, CircleProc);
+			InvalidateRect(hWnd, 0, 1);
 			break;
 		case IDM_SQUER:
 			DialogBox(hInst, MAKEINTRESOURCE(IDD_SQUER), hWnd, SquerProc);
+			InvalidateRect(hWnd, 0, 1);
 			break;
 		case IDM_ABOUT:
 			DialogBox(hInst, MAKEINTRESOURCE(IDD_ABOUTBOX), hWnd, About);
@@ -208,25 +219,14 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 
 			HBRUSH hOldBrush = (HBRUSH)SelectObject(hdc, GetStockObject(GRAY_BRUSH));
 		
-
-			Circle c(Point(250, 250), 150);
-			c.Draw(hdc);
+			for (size_t i = 0; i < pic.Size(); ++i)
+				pic[i]->Draw(hdc);
 
 			HBRUSH hNewBrush = CreateSolidBrush(RGB(255, 255, 0));
 			SelectObject(hdc, hNewBrush);
-			Circle c2(Point(400, 200), 50);
-			c2.Draw(hdc);
-
+			
 			HBRUSH hNewBrush2 = CreateHatchBrush(HS_DIAGCROSS, RGB(0, 255, 0));
 			SelectObject(hdc, hNewBrush2);
-			Circle c3(Point(500, 150), 100);
-			c3.Draw(hdc);
-
-			Line ab(Point(100, 100), Point(200, 200));
-			ab.Draw(hdc);
-		
-			Squer ac(Point(250, 250), Point(300, 300));
-			ac.Draw(hdc);
 
 			RECT rect = {0, 0, 200, 50};
 			//LPRECT lpRect = &rect;
@@ -244,6 +244,8 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 		EndPaint(hWnd, &ps);
 		break;
 	case WM_DESTROY:
+		for (size_t i = 0; i < pic.Size(); ++i)
+			delete pic[i];
 		PostQuitMessage(0);
 		break;
 	default:
@@ -295,9 +297,8 @@ INT_PTR CALLBACK LineProc(HWND hDlg, UINT message, WPARAM wParam, LPARAM lParam)
 					 //GetDlgItemText();
 					 int x2 = GetDlgItemInt(hDlg, IDC_X2, 0, 0);
 					 int y2 = GetDlgItemInt(hDlg, IDC_Y2, 0, 0);
-					 Line a(Point(x1, y1), Point(x2, y2));
+					 pic.Add(new Line(Point(x1, y1), Point(x2, y2)));
 			}
-
 		case IDCANCEL:
 			EndDialog(hDlg, wmId);
 			return (INT_PTR)TRUE;
@@ -328,7 +329,7 @@ INT_PTR CALLBACK CircleProc(HWND hDlg, UINT message, WPARAM wParam, LPARAM lPara
 					 int x = GetDlgItemInt(hDlg, IDC_X, 0, 0);
 					 int y = GetDlgItemInt(hDlg, IDC_Y, 0, 0);
 					 int r = GetDlgItemInt(hDlg, IDC_RADIUS, 0, 0);
-					 Circle c(Point(x,y), r);
+					 pic.Add(new Circle(Point(x,y), r));
 		}
 		case IDCANCEL:
 			EndDialog(hDlg, wmId);
@@ -363,7 +364,7 @@ INT_PTR CALLBACK SquerProc(HWND hDlg, UINT message, WPARAM wParam, LPARAM lParam
 					 int y1 = GetDlgItemInt(hDlg, IDC_Y1, 0, 0);
 					 int x2 = GetDlgItemInt(hDlg, IDC_X2, 0, 0);
 					 int y2 = GetDlgItemInt(hDlg, IDC_Y2, 0, 0);
-					 Squer ac(Point(x1, y1), Point(x2, y2));
+					pic.Add(new Squer(Point(x1, y1), Point(x2, y2)));
 		}
 		case IDCANCEL:
 			EndDialog(hDlg, wmId);
