@@ -5,11 +5,13 @@ CONFIG -= qt
 
 SOURCES += \
     Usart.cpp \
-    useUsart.cpp
+    useUsart.cpp \
+    commands.cpp
 
 include(deployment.pri)
 qtcAddDeployment()
 
 HEADERS += \
-    Usart.h
+    Usart.h \
+    commands.h
 
