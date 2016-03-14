@@ -29,8 +29,7 @@ class usart {
         byte_t get_port(char &name_pt) const;           // получение значения пота (name_pt)
         byte_t set_port(char &name_pt, byte_t &i_pt);   // установка значения (i_pt) порта (name_pt)
         void old_set_ports(char RA, char RB, char RC, char RD); //первая версия программы для контроллера
-
-	public:
+    public:
         usart();
         ~usart();
         char* get_command(size_t cmd_size);

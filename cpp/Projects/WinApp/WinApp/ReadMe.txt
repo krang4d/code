@@ -2,6 +2,9 @@
     WIN32 APPLICATION : WinApp Project Overview
 ========================================================================
 
+http://habrahabr.ru/post/164193/ TCHAR описание типов WIN API
+https://ru.wikipedia.org/wiki/Microsoft_Developer_Network MSDN сеть для разработчиков Microsoft
+
 AppWizard has created this WinApp application for you.
 
 This file contains a summary of what you will find in each of the files that

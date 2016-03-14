@@ -1,7 +1,6 @@
 #include "stdafx.h"
 #include "Circle.h"
 
-
 Circle::Circle(const Point &_c, int _r) :c(_c), r(_r)
 {}
 
